@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: '#233',
   },
-
   timeLine: {
     position: 'relative',
     padding: '1rem',
@@ -97,6 +96,11 @@ const useStyles = makeStyles((theme) => ({
     padding: '3rem 0',
     textTransform: 'uppercase',
   },
+  subHeading: {
+    color: 'white',
+    padding: '0',
+    textTransform: 'uppercase',
+  },
 }));
 
 const Resume = () => {
@@ -113,8 +117,80 @@ const Resume = () => {
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
           >
-            2020
+            2010
           </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}
+            >
+              Media Marketing.
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              IFR Monitoring.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify' }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              velit consequatur similique veniam molestias labore cumque
+              exercitationem fugiat totam. In!
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+          >
+            2013
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}
+            >
+              Data Entry / Data Base Monitoring
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              RecHospi Agroupation.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify' }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              velit consequatur similique veniam molestias labore cumque
+              exercitationem fugiat totam. In!
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+          >
+            2018
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}
+            >
+              Web Design / Web Development
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              FreeLance.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify' }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              velit consequatur similique veniam molestias labore cumque
+              exercitationem fugiat totam. In!
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </React.Fragment>
