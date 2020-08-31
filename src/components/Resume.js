@@ -116,6 +116,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px' }}
           >
             2010
           </Typography>
@@ -142,6 +143,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px' }}
           >
             2013
           </Typography>
@@ -168,6 +170,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px' }}
           >
             2018
           </Typography>
