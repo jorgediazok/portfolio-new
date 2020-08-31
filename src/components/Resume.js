@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: '#233',
   },
+
   timeLine: {
     position: 'relative',
     padding: '1rem',
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       height: '100%',
-      boder: '1px solid tan',
+      border: '2px solid tan',
       right: '40px',
       top: 0,
     },
