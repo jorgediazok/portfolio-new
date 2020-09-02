@@ -50,7 +50,7 @@ const Contact = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Box component="div">
+      <Box component="div" style={{ background: '#233', height: '100vh' }}>
         <Grid container justify="center">
           <Box component="form" className={classes.form}>
             <Typography className={classes.heading} variant="h5">
