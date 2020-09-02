@@ -1,4 +1,5 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {
   TextField,
@@ -63,12 +64,19 @@ const InputField = withStyles({
 
 const Contact = () => {
   const classes = useStyles();
+
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <React.Fragment>
       <Navbar />
       <Box component="div" style={{ background: '#233', height: '100vh' }}>
         <Grid container justify="center">
-          <Box component="form" className={classes.form}>
+          <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
             <Typography className={classes.heading} variant="h5">
               Contact me !
             </Typography>
@@ -76,37 +84,42 @@ const Contact = () => {
               fullWidth={true}
               label="Name"
               variant="outlined"
+              name="name"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
               size="medium"
+              inputRef={register}
             ></InputField>
-            <br />
             <InputField
               fullWidth={true}
               label="Email"
               variant="outlined"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
+              name="email"
               size="medium"
+              inputRef={register}
             ></InputField>
-            <br />
             <InputField
               fullWidth={true}
               label="Country"
               variant="outlined"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
+              name="country"
               size="medium"
+              inputRef={register}
             ></InputField>
-            <br />
             <TextareaAutosize
               rowsMin={3}
               rowsMax={6}
+              name="textarea"
               placeholder="Leave your message"
               className={classes.textarea}
+              ref={register}
             />
-            <br />
             <Button
+              type="submit"
               className={classes.button}
               variant="outlined"
               fullWidth={true}
@@ -114,7 +127,7 @@ const Contact = () => {
             >
               Contact
             </Button>
-          </Box>
+          </form>
         </Grid>
       </Box>
     </React.Fragment>
