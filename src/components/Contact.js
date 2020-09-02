@@ -3,7 +3,6 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { TextField, Typography, Button, Grid, Box } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import Navbar from './Navbar';
-import { Translate } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -11,6 +10,16 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     position: 'absolute',
+  },
+  button: {
+    marginTop: '1rem',
+    color: 'tomato',
+    borderColor: 'tomato',
+  },
+  heading: {
+    color: 'tomato',
+    textAlign: 'center',
+    textTransform: 'uppercase',
   },
 }));
 
@@ -44,7 +53,9 @@ const Contact = () => {
       <Box component="div">
         <Grid container justify="center">
           <Box component="form" className={classes.form}>
-            <Typography variant="h5">Contact me !</Typography>
+            <Typography className={classes.heading} variant="h5">
+              Contact me !
+            </Typography>
             <InputField
               fullWidth={true}
               label="Name"
@@ -72,7 +83,12 @@ const Contact = () => {
               size="medium"
             ></InputField>
             <br />
-            <Button variant="outlined" fullWidth={true} endIcon={<SendIcon />}>
+            <Button
+              className={classes.button}
+              variant="outlined"
+              fullWidth={true}
+              endIcon={<SendIcon />}
+            >
               Contact
             </Button>
           </Box>
