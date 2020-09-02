@@ -14,6 +14,7 @@ import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme) => ({
   form: {
+    width: '300px',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   textarea: {
     marginTop: '10px',
     background: 'transparent',
-    width: '223px',
+    width: '300px',
     borderColor: 'tan',
     color: 'white',
     fontSize: '18px',
@@ -76,7 +77,7 @@ const Contact = () => {
       <Navbar />
       <Box component="div" style={{ background: '#233', height: '100vh' }}>
         <Grid container justify="center">
-          <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
+          <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
             <Typography className={classes.heading} variant="h5">
               Contact me !
             </Typography>
@@ -88,8 +89,11 @@ const Contact = () => {
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
               size="medium"
-              inputRef={register}
+              inputRef={register({ required: true })}
             ></InputField>
+            {errors.name && (
+              <p style={{ color: 'tomato' }}>Please enter your name</p>
+            )}
             <InputField
               fullWidth={true}
               label="Email"
@@ -98,8 +102,11 @@ const Contact = () => {
               margin="dense"
               name="email"
               size="medium"
-              inputRef={register}
+              inputRef={register({ required: true })}
             ></InputField>
+            {errors.email && (
+              <p style={{ color: 'tomato' }}>Please enter your email</p>
+            )}
             <InputField
               fullWidth={true}
               label="Country"
@@ -108,7 +115,7 @@ const Contact = () => {
               margin="dense"
               name="country"
               size="medium"
-              inputRef={register}
+              inputRef={register({ required: true })}
             ></InputField>
             <TextareaAutosize
               rowsMin={3}
@@ -116,8 +123,11 @@ const Contact = () => {
               name="textarea"
               placeholder="Leave your message"
               className={classes.textarea}
-              ref={register}
+              ref={register({ required: true })}
             />
+            {errors.textarea && (
+              <p style={{ color: 'tomato' }}>You forgot the message :)</p>
+            )}
             <Button
               type="submit"
               className={classes.button}

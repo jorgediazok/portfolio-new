@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "this is the backend for my portfolio",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
