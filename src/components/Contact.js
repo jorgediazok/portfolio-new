@@ -1,6 +1,13 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { TextField, Typography, Button, Grid, Box } from '@material-ui/core';
+import {
+  TextField,
+  TextareaAutosize,
+  Typography,
+  Button,
+  Grid,
+  Box,
+} from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import Navbar from './Navbar';
 
@@ -20,6 +27,15 @@ const useStyles = makeStyles((theme) => ({
     color: 'tomato',
     textAlign: 'center',
     textTransform: 'uppercase',
+  },
+  textarea: {
+    marginTop: '10px',
+    background: 'transparent',
+    width: '223px',
+    borderColor: 'tan',
+    color: 'white',
+    fontSize: '18px',
+    borderRadius: '5px',
   },
 }));
 
@@ -82,6 +98,13 @@ const Contact = () => {
               margin="dense"
               size="medium"
             ></InputField>
+            <br />
+            <TextareaAutosize
+              rowsMin={3}
+              rowsMax={6}
+              placeholder="Leave your message"
+              className={classes.textarea}
+            />
             <br />
             <Button
               className={classes.button}
