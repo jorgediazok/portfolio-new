@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -11,22 +12,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
+//CREDENTIALS
+const userCredentials = process.env.USER_CREDENTIALS;
+const passCredentials = process.env.USER_PASSWORD;
+
 //Check
 app.get('/', (req, res) => {
   res.send('Hello');
 });
 
-app.post('/api/form', (req, res) => {
+app.post('/api/form', async (req, res) => {
   let data = req.body;
   console.log(data);
 
-  let smtpTransport = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
+  let smtpTransport = await nodemailer.createTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: 'domenic61@ethereal.email',
-      pass: 't9AJw21scSRuPMDDjg',
+      user: userCredentials,
+      pass: passCredentials,
     },
     tls: {
       rejectUnauthorized: false,
@@ -34,7 +40,7 @@ app.post('/api/form', (req, res) => {
   });
   let mailOptions = {
     from: data.email,
-    to: 'vidasimple_@hotmail.com',
+    to: 'jorgediazok@gmail.com',
     subject: `Message from ${data.name}`,
     html: `
     <h3>Information</h3>
@@ -48,7 +54,7 @@ app.post('/api/form', (req, res) => {
     `,
   };
 
-  smtpTransport.sendMail(mailOptions, (error, response) => {
+  await smtpTransport.sendMail(mailOptions, (error, response) => {
     if (error) {
       res.send(error);
     } else {
