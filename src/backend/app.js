@@ -1,17 +1,67 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
+//Check
 const app = express();
+
+//Body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cookieParser());
+app.use(cors());
 
-app.post('/api/sendMail', (req, res) => {
-  console.log;
+//Check
+app.get('/', (req, res) => {
+  res.send('Hello');
 });
 
-app.listen(5000, () => {
-  console.log('Server listening on port 5000');
+app.post('/api/form', (req, res) => {
+  let data = req.body;
+  console.log(data);
+
+  let smtpTransport = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: 'domenic61@ethereal.email',
+      pass: 't9AJw21scSRuPMDDjg',
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+  let mailOptions = {
+    from: data.email,
+    to: 'jorgediazok@gmail.com',
+    subject: `Message from ${data.name}`,
+    html: `
+    <h3>Information</h3>
+    <ul>
+    <li>Name: ${data.name}</li> 
+    <li>Email: ${data.email}</li> 
+    <li>Country: ${data.country}</li>
+    </ul>
+    <h3>Message</h3>
+    <p>${data.textarea}</p>
+    `,
+  };
+
+  smtpTransport.sendMail(mailOptions, (error, response) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.send('success');
+    }
+  });
+  smtpTransport.close();
+});
+
+//Listening in Port
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });

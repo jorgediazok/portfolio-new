@@ -84,15 +84,20 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const formSubmit = (e) => {
     e.preventDefault();
-    const dataToSubmit = {
+    let data = {
       name,
       email,
       country,
       textarea,
     };
-    axios.post('api/sendMail', dataToSubmit);
+    axios
+      .post('/api/form', data)
+      .then((res) => console.log(res))
+      .catch(() => {
+        console.log('message not send');
+      });
   };
 
   return (
@@ -100,7 +105,7 @@ const Contact = () => {
       <Navbar />
       <Box component="div" style={{ background: '#233', height: '100vh' }}>
         <Grid container justify="center">
-          <form className={classes.form} onSubmit={handleSubmit}>
+          <form onSubmit={formSubmit} className={classes.form}>
             <Typography className={classes.heading} variant="h5">
               Contact me !
             </Typography>
@@ -109,6 +114,7 @@ const Contact = () => {
               id="name"
               fullWidth={true}
               label="Name"
+              name="name"
               variant="outlined"
               value={name}
               inputProps={{ style: { color: 'white' } }}
@@ -121,6 +127,7 @@ const Contact = () => {
               id="email"
               fullWidth={true}
               label="Email"
+              name="email"
               variant="outlined"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
@@ -133,6 +140,7 @@ const Contact = () => {
               id="country"
               fullWidth={true}
               label="Country"
+              name="country"
               variant="outlined"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
@@ -143,6 +151,7 @@ const Contact = () => {
 
             <TextareaAutosize
               id="textarea"
+              name="textarea"
               rowsMin={3}
               rowsMax={6}
               value={textarea}
@@ -157,7 +166,6 @@ const Contact = () => {
               variant="outlined"
               fullWidth={true}
               endIcon={<SendIcon />}
-              onClick={handleSubmit}
             >
               Contact
             </Button>
