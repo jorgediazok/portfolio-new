@@ -84,6 +84,13 @@ const Contact = () => {
     }
   };
 
+  const resetForm = () => {
+    setName('');
+    setEmail('');
+    setCountry('');
+    setTextarea('');
+  };
+
   const formSubmit = (e) => {
     e.preventDefault();
     let data = {
@@ -94,7 +101,10 @@ const Contact = () => {
     };
     axios
       .post('/api/form', data)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        resetForm();
+      })
       .catch(() => {
         console.log('message not send');
       });
