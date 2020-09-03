@@ -105,7 +105,12 @@ const Contact = () => {
       <Navbar />
       <Box component="div" style={{ background: '#233', height: '100vh' }}>
         <Grid container justify="center">
-          <form onSubmit={formSubmit} className={classes.form}>
+          <form
+            method="POST"
+            action="/api/form"
+            onSubmit={formSubmit}
+            className={classes.form}
+          >
             <Typography className={classes.heading} variant="h5">
               Contact me !
             </Typography>

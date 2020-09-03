@@ -24,10 +24,7 @@ app.post('/api/form', (req, res) => {
     host: 'smtp.ethereal.email',
     port: 587,
     secure: false, // true for 465, false for other ports
-    auth: {
-      user: 'domenic61@ethereal.email',
-      pass: 't9AJw21scSRuPMDDjg',
-    },
+    auth: {},
     tls: {
       rejectUnauthorized: false,
     },
