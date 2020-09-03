@@ -1,7 +1,17 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const nodemailer = require('nodemailer');
+
 const app = express();
-const port = 5000;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
-app.get('/', (req, res) => res.send('Hello World'));
+app.post('/api/sendMail', (req, res) => {
+  console.log;
+});
 
-app.listen(port, () => console.log('App Listening in port 5000'));
+app.listen(5000, () => {
+  console.log('Server listening on port 5000');
+});

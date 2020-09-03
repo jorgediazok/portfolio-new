@@ -1,5 +1,4 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {
   TextField,
@@ -11,6 +10,7 @@ import {
 } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import Navbar from './Navbar';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -66,10 +66,33 @@ const InputField = withStyles({
 const Contact = () => {
   const classes = useStyles();
 
-  const { register, handleSubmit, errors } = useForm();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [country, setCountry] = useState('');
+  const [textarea, setTextarea] = useState('');
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const handleChange = (e) => {
+    e.preventDefault();
+    if (e.target.id === 'name') {
+      setName(e.target.value);
+    } else if (e.target.id === 'email') {
+      setEmail(e.target.value);
+    } else if (e.target.id === 'country') {
+      setCountry(e.target.value);
+    } else {
+      setTextarea(e.target.value);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const dataToSubmit = {
+      name,
+      email,
+      country,
+      textarea,
+    };
+    axios.post('api/sendMail', dataToSubmit);
   };
 
   return (
@@ -77,63 +100,64 @@ const Contact = () => {
       <Navbar />
       <Box component="div" style={{ background: '#233', height: '100vh' }}>
         <Grid container justify="center">
-          <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
+          <form className={classes.form} onSubmit={handleSubmit}>
             <Typography className={classes.heading} variant="h5">
               Contact me !
             </Typography>
+
             <InputField
+              id="name"
               fullWidth={true}
               label="Name"
               variant="outlined"
-              name="name"
+              value={name}
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
               size="medium"
-              inputRef={register({ required: true })}
+              onChange={handleChange}
             ></InputField>
-            {errors.name && (
-              <p style={{ color: 'tomato' }}>Please enter your name</p>
-            )}
+
             <InputField
+              id="email"
               fullWidth={true}
               label="Email"
               variant="outlined"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
-              name="email"
+              value={email}
               size="medium"
-              inputRef={register({ required: true })}
+              onChange={handleChange}
             ></InputField>
-            {errors.email && (
-              <p style={{ color: 'tomato' }}>Please enter your email</p>
-            )}
+
             <InputField
+              id="country"
               fullWidth={true}
               label="Country"
               variant="outlined"
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
-              name="country"
+              value={country}
               size="medium"
-              inputRef={register({ required: true })}
+              onChange={handleChange}
             ></InputField>
+
             <TextareaAutosize
+              id="textarea"
               rowsMin={3}
               rowsMax={6}
-              name="textarea"
+              value={textarea}
               placeholder="Leave your message"
               className={classes.textarea}
-              ref={register({ required: true })}
+              onChange={handleChange}
             />
-            {errors.textarea && (
-              <p style={{ color: 'tomato' }}>You forgot the message :)</p>
-            )}
+
             <Button
               type="submit"
               className={classes.button}
               variant="outlined"
               fullWidth={true}
               endIcon={<SendIcon />}
+              onClick={handleSubmit}
             >
               Contact
             </Button>
