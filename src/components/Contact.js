@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiAlert from '@material-ui/lab/Alert';
 import {
@@ -83,7 +84,6 @@ const Contact = () => {
   const [country, setCountry] = useState('');
   const [textarea, setTextarea] = useState('');
   const [open, setOpen] = useState(false);
-  const [transition, setTransition] = useState();
 
   //Functions
 
@@ -219,7 +219,6 @@ const Contact = () => {
             open={open}
             autoHideDuration={4000}
             onClose={handleClose}
-            TransitionComponent={transition}
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
             <Alert onClose={handleClose} variant="standard" severity="success">
