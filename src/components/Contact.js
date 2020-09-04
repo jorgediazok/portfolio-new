@@ -41,15 +41,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     textTransform: 'uppercase',
   },
-  textarea: {
-    marginTop: '12px',
-    background: 'transparent',
-    width: '300px',
-    borderColor: 'tan',
-    color: 'white',
-    fontSize: '18px',
-    borderRadius: '5px',
-  },
 }));
 
 const InputField = withStyles({
@@ -202,19 +193,25 @@ const Contact = () => {
               onChange={handleChange}
             ></InputField>
 
-            <TextareaAutosize
+            <br />
+
+            <InputField
               id="textarea"
+              fullWidth={true}
               name="textarea"
-              rowsMin={3}
-              rowsMax={6}
+              label="Message"
+              variant="outlined"
+              multiline
+              margin="dense"
+              inputProps={{ style: { color: 'white' } }}
+              rows={4}
+              size="medium"
               value={textarea}
-              placeholder="Your message here"
-              ref={register({ required: true })}
-              className={classes.textarea}
+              inputRef={register({ required: true })}
               onChange={handleChange}
             />
             <p style={{ color: 'tomato' }}>
-              {errors.email && 'Do not forget your message :)'}
+              {errors.textarea && 'Do not forget your message :)'}
             </p>
 
             <Button
