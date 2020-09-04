@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
   },
   textarea: {
-    marginTop: '10px',
+    marginTop: '12px',
     background: 'transparent',
     width: '300px',
     borderColor: 'tan',
@@ -84,6 +84,7 @@ const Contact = () => {
   const [country, setCountry] = useState('');
   const [textarea, setTextarea] = useState('');
   const [open, setOpen] = useState(false);
+  const { register, errors, handleSubmit } = useForm();
 
   //Functions
 
@@ -120,8 +121,7 @@ const Contact = () => {
 
   //Backend integration
 
-  const formSubmit = (e) => {
-    e.preventDefault();
+  const formSubmit = () => {
     let data = {
       name,
       email,
@@ -132,6 +132,7 @@ const Contact = () => {
       .post('/api/form', data)
       .then((res) => {
         console.log(res);
+        handleClick();
         resetForm();
       })
       .catch(() => {
@@ -147,7 +148,7 @@ const Contact = () => {
           <form
             method="POST"
             action="/api/form"
-            onSubmit={formSubmit}
+            onSubmit={handleSubmit(formSubmit)}
             className={classes.form}
           >
             <Typography className={classes.heading} variant="h5">
@@ -164,8 +165,12 @@ const Contact = () => {
               inputProps={{ style: { color: 'white' } }}
               margin="dense"
               size="medium"
+              inputRef={register({ required: true })}
               onChange={handleChange}
             ></InputField>
+            <p style={{ color: 'tomato' }}>
+              {errors.name && 'Please add your Name'}
+            </p>
 
             <InputField
               id="email"
@@ -177,8 +182,12 @@ const Contact = () => {
               margin="dense"
               value={email}
               size="medium"
+              inputRef={register({ required: true })}
               onChange={handleChange}
             ></InputField>
+            <p style={{ color: 'tomato' }}>
+              {errors.email && 'Please write your Email'}
+            </p>
 
             <InputField
               id="country"
@@ -200,9 +209,13 @@ const Contact = () => {
               rowsMax={6}
               value={textarea}
               placeholder="Your message here"
+              ref={register({ required: true })}
               className={classes.textarea}
               onChange={handleChange}
             />
+            <p style={{ color: 'tomato' }}>
+              {errors.email && 'Do not forget your message :)'}
+            </p>
 
             <Button
               type="submit"
@@ -210,7 +223,6 @@ const Contact = () => {
               variant="outlined"
               fullWidth={true}
               endIcon={<SendIcon />}
-              onClick={handleClick}
             >
               Contact
             </Button>
