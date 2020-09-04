@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import MuiAlert from '@material-ui/lab/Alert';
 import {
   TextField,
   TextareaAutosize,
   Typography,
   Button,
+  Snackbar,
   Grid,
   Box,
 } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import Navbar from './Navbar';
 import axios from 'axios';
+
+//Toastr
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+//Styles
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -66,10 +76,16 @@ const InputField = withStyles({
 const Contact = () => {
   const classes = useStyles();
 
+  //States
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
   const [textarea, setTextarea] = useState('');
+  const [open, setOpen] = useState(false);
+  const [transition, setTransition] = useState();
+
+  //Functions
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -84,12 +100,25 @@ const Contact = () => {
     }
   };
 
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
   const resetForm = () => {
     setName('');
     setEmail('');
     setCountry('');
     setTextarea('');
   };
+
+  //Backend integration
 
   const formSubmit = (e) => {
     e.preventDefault();
@@ -170,7 +199,7 @@ const Contact = () => {
               rowsMin={3}
               rowsMax={6}
               value={textarea}
-              placeholder="Leave your message"
+              placeholder="Your message here"
               className={classes.textarea}
               onChange={handleChange}
             />
@@ -181,10 +210,22 @@ const Contact = () => {
               variant="outlined"
               fullWidth={true}
               endIcon={<SendIcon />}
+              onClick={handleClick}
             >
               Contact
             </Button>
           </form>
+          <Snackbar
+            open={open}
+            autoHideDuration={4000}
+            onClose={handleClose}
+            TransitionComponent={transition}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          >
+            <Alert onClose={handleClose} variant="standard" severity="success">
+              Message Sent
+            </Alert>
+          </Snackbar>
         </Grid>
       </Box>
     </React.Fragment>
