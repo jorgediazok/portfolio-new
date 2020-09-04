@@ -4,7 +4,6 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiAlert from '@material-ui/lab/Alert';
 import {
   TextField,
-  TextareaAutosize,
   Typography,
   Button,
   Snackbar,
@@ -193,8 +192,6 @@ const Contact = () => {
               onChange={handleChange}
             ></InputField>
 
-            <br />
-
             <InputField
               id="textarea"
               fullWidth={true}
@@ -209,7 +206,7 @@ const Contact = () => {
               value={textarea}
               inputRef={register({ required: true })}
               onChange={handleChange}
-            />
+            ></InputField>
             <p style={{ color: 'tomato' }}>
               {errors.textarea && 'Do not forget your message :)'}
             </p>

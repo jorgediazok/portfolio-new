@@ -1,7 +1,5 @@
-// @ts-nocheck
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { Link } from 'react-router-dom';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import Facebook from '@material-ui/icons/Facebook';
 import GitHub from '@material-ui/icons/GitHub';
@@ -27,43 +25,39 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <BottomNavigation width="auto" style={{ background: '#222' }}>
-        <Link
-          to="//facebook.com"
-          target={'_blank'}
+      <BottomNavigation
+        showLabels={false}
+        style={{ background: '#222', width: 'auto' }}
+      >
+        <BottomNavigationAction
+          href="//facebook.com"
+          target="_blank"
           rel="noopener noreferrer"
-          style={{ marginTop: '15px' }}
-        >
-          <BottomNavigationAction
-            className={classes.root}
-            style={{ padding: '0' }}
-            icon={<Facebook />}
-          ></BottomNavigationAction>
-        </Link>
-        <Link
-          to="//github.com/jorgediazok"
-          target={'_blank'}
+          className={classes.root}
+          style={{ padding: '0' }}
+          showLabel={false}
+          icon={<Facebook />}
+        ></BottomNavigationAction>
+
+        <BottomNavigationAction
+          href="//github.com/jorgediazok"
+          target="_blank"
           rel="noopener noreferrer"
-          style={{ marginTop: '15px' }}
-        >
-          <BottomNavigationAction
-            className={classes.root}
-            style={{ padding: '0' }}
-            icon={<GitHub />}
-          ></BottomNavigationAction>
-        </Link>
-        <Link
-          to="//www.linkedin.com/in/jorgediaz1984/"
-          target={'_blank'}
+          className={classes.root}
+          style={{ padding: '0' }}
+          showLabel={false}
+          icon={<GitHub />}
+        ></BottomNavigationAction>
+
+        <BottomNavigationAction
+          href="//www.linkedin.com/in/jorgediaz1984/"
+          target="_blank"
           rel="noopener noreferrer"
-          style={{ marginTop: '15px' }}
-        >
-          <BottomNavigationAction
-            className={classes.root}
-            style={{ padding: '0' }}
-            icon={<Linkedin />}
-          ></BottomNavigationAction>
-        </Link>
+          className={classes.root}
+          style={{ padding: '0' }}
+          showLabel={false}
+          icon={<Linkedin />}
+        ></BottomNavigationAction>
       </BottomNavigation>
     </React.Fragment>
   );
