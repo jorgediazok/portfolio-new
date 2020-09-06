@@ -118,7 +118,7 @@ const Resume = () => {
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
             style={{ borderRadius: '5px' }}
           >
-            2010
+            2007
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -126,18 +126,19 @@ const Resume = () => {
               className={classes.subHeading}
               style={{ color: 'tomato' }}
             >
-              Media Marketing.
+              Market Research
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
-              IFR Monitoring.
+              GFK/IFR Monitoring.
             </Typography>
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              velit consequatur similique veniam molestias labore cumque
-              exercitationem fugiat totam. In!
+              • Investigación de mercado en Argentina. Trabajo con otros equipos
+              en Latinoamérica. • Análisis de métricas y comparación de
+              productos disponibles en tiendas físicas y online • Presentación
+              de informes en fechas límite. Coordinación y trabajo en equipo.
             </Typography>
           </Box>
           <Typography
@@ -145,7 +146,7 @@ const Resume = () => {
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
             style={{ borderRadius: '5px' }}
           >
-            2013
+            2012
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -153,18 +154,19 @@ const Resume = () => {
               className={classes.subHeading}
               style={{ color: 'tomato' }}
             >
-              Data Entry / Data Base Monitoring
+              Data Entry / Data Base Control
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
-              RecHospi Agroupation.
+              RecHospi Agrupación.
             </Typography>
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              velit consequatur similique veniam molestias labore cumque
-              exercitationem fugiat totam. In!
+              • Administrativo/Data entry, facturación de prestaciones médicas
+              con sistema propio. • Logística, manejo y organización de
+              documentación pública. Manejo de Nomenclador • Trabajo con base de
+              datos a través de MYSQL.
             </Typography>
           </Box>
           <Typography
@@ -189,9 +191,10 @@ const Resume = () => {
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              velit consequatur similique veniam molestias labore cumque
-              exercitationem fugiat totam. In!
+              • Trabajos de maquetación y desarrollo web de manera Freelance. •
+              Utilización de frameworks como AngularJS y ReactJS en el Frontend
+              y NodeJS y MongoDB en Backend. • Participé también en proyectos
+              grupales como la creación de un Chatbot.
             </Typography>
           </Box>
         </Box>
