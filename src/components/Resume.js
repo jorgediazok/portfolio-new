@@ -2,9 +2,18 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
+import Grid from '@material-ui/core/Grid';
 import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
   mainContainer: {
     background: '#233',
   },
@@ -198,12 +207,14 @@ const Resume = () => {
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}
             >
-              • Trabajos de desarrollo web de manera Freelance. <br /> •
-              Utilización de frameworks como AngularJS y ReactJS en el Frontend
-              y NodeJS y MongoDB en Backend. <br /> • Responsive Design <br />•
-              Conocimientos en Diseño UX, UI y IxD aplicados en proyectos <br />{' '}
-              • Participé también en proyectos grupales como la creación de un
-              Chatbot.
+              • Trabajos de desarrollo web de manera Freelance. <br />
+              • Utilización de frameworks como AngularJS y ReactJS en el
+              Frontend y NodeJS y MongoDB en Backend. <br /> • Responsive
+              Design.
+              <br />
+              •Conocimientos en Diseño UX, UI y IxD aplicados en proyectos
+              <br />• Participé también en proyectos grupales como la creación
+              de un Chatbot.
             </Typography>
           </Box>
         </Box>
@@ -294,70 +305,109 @@ const Resume = () => {
           </Box>
         </Box>
       </Box>
-      <Box component="header" className={classes.mainContainer}>
+
+      <Box
+        component="header"
+        className={classes.root}
+        style={{ background: '#222' }}
+      >
         <Typography variant="h4" align="center" className={classes.heading}>
           SKILLS & TECHNOLOGIES
         </Typography>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            ENGLISH
-          </Typography>
-          <Rating name="read-only" value={5} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            FRENCH
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            HTML5
-          </Typography>
-          <Rating name="read-only" value={5} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            CSS + SASS
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            JAVASCRIPT
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            REACT JS + HOOKS
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            ANGULAR JS
-          </Typography>
-          <Rating name="read-only" value={3} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            NODE JS / EXPRESS
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            MYSQL + MONGODB
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
-        <Box component="fieldset" borderColor="transparent">
-          <Typography style={{ color: 'tan' }} component="legend">
-            UX/UI DESIGN
-          </Typography>
-          <Rating name="read-only" value={4} readOnly />
-        </Box>
+
+        <Grid container spacing={3}>
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                ENGLISH
+              </Typography>
+              <Rating name="read-only" value={5} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                FRENCH
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                HTML5
+              </Typography>
+              <Rating name="read-only" value={5} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                CSS + SASS
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                JAVASCRIPT
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={3}>
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                REACTJS
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                ANGULAR JS
+              </Typography>
+              <Rating name="read-only" value={3} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                NODE/EXPRESS
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" mb={3} borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                MYSQL/MONGODB
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+
+          <Grid item xs>
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                ADOBE PS/AI/XD
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </React.Fragment>
   );
