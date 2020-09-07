@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: '#233',
   },
+  mainContainer2: {
+    background: '#222',
+  },
   timeLine: {
     position: 'relative',
     padding: '1rem',
@@ -135,12 +138,13 @@ const Resume = () => {
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}
             >
-              • Investigación de mercado en Argentina. Trabajo con otros equipos
-              en Latinoamérica. • Análisis de métricas y comparación de
-              productos disponibles en tiendas físicas y online • Presentación
-              de informes en fechas límite. Coordinación y trabajo en equipo.
+              • Investigación de mercado en Argentina. Trabajo con equipos en
+              Latam. <br /> • Análisis de métricas y comparación de productos
+              disponibles en tiendas físicas y online <br /> • Armado y
+              presentación de informes con deadlines.
             </Typography>
           </Box>
+
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
@@ -164,9 +168,9 @@ const Resume = () => {
               style={{ color: 'tan', textAlign: 'justify' }}
             >
               • Administrativo/Data entry, facturación de prestaciones médicas
-              con sistema propio. • Logística, manejo y organización de
-              documentación pública. Manejo de Nomenclador • Trabajo con base de
-              datos a través de MYSQL.
+              con sistema propio. <br /> • Logística, manejo y organización de
+              documentación pública. Manejo de Nomenclador <br /> • Trabajo con
+              base de datos a través de MYSQL. <br />
             </Typography>
           </Box>
           <Typography
@@ -182,19 +186,106 @@ const Resume = () => {
               className={classes.subHeading}
               style={{ color: 'tomato' }}
             >
-              Web Design / Web Development
+              Full Stack / Web Design
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
-              FreeLance.
+              Freelance. (Hasta la actualidad)
             </Typography>
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}
             >
-              • Trabajos de maquetación y desarrollo web de manera Freelance. •
+              • Trabajos de desarrollo web de manera Freelance. <br /> •
               Utilización de frameworks como AngularJS y ReactJS en el Frontend
-              y NodeJS y MongoDB en Backend. • Participé también en proyectos
-              grupales como la creación de un Chatbot.
+              y NodeJS y MongoDB en Backend. <br /> • Responsive Design <br />•
+              Conocimientos en Diseño UX, UI y IxD aplicados en proyectos <br />{' '}
+              • Participé también en proyectos grupales como la creación de un
+              Chatbot.
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      <Box component="header" className={classes.mainContainer2}>
+        <Typography variant="h4" align="center" className={classes.heading}>
+          Education & Certifications
+        </Typography>
+        <Box component="div" className={classes.timeLine}>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px' }}
+          >
+            2007
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}
+            >
+              Tecnicatura en Sonido y Grabación.
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              Taller de Música de Buenos Aires (TAMABA)
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify' }}
+            >
+              • Mezcla, grabación y masterización de sonido. Sonido en vivo.
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px' }}
+          >
+            2010
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}
+            >
+              Licenciatura en Ciencias de la Comunicación.
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              Universidad de Buenos Aires. (UBA)
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify' }}
+            >
+              • Especialización en periodismo y transmedia. Promedio general: 8.
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px' }}
+          >
+            2019
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}
+            >
+              IT Certifications.
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              Universidad Tecnológica Nacional (UTN)
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify' }}
+            >
+              • Professional Full-Stack Developer: Desarrollo con ReactJS,
+              AngularJS, NodeJS, MYSQL y MongoDB. <br /> • Desarrollo web en
+              HTML 5, CSS3 y Javascript (nivel avanzado) <br />• Experto en
+              Diseño de Experiencia de Usuario e Interacciones (ux y ixd)
             </Typography>
           </Box>
         </Box>
