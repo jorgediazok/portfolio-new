@@ -303,7 +303,7 @@ const Resume = () => {
           SKILLS & TECHNOLOGIES
         </Typography>
 
-        <Grid container>
+        <Grid container style={{ paddingLeft: '60px' }}>
           <Grid item xs>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">
@@ -341,7 +341,7 @@ const Resume = () => {
           </Grid>
         </Grid>
 
-        <Grid container>
+        <Grid container style={{ paddingLeft: '60px' }}>
           <Grid item xs>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">
