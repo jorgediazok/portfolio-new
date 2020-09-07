@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
 import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme) => ({
@@ -107,6 +108,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Resume = () => {
+  const [value, setValue] = React.useState(2);
+
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -205,6 +208,7 @@ const Resume = () => {
           </Box>
         </Box>
       </Box>
+
       <Box component="header" className={classes.mainContainer2}>
         <Typography variant="h4" align="center" className={classes.heading}>
           Education & Certifications
@@ -288,6 +292,71 @@ const Resume = () => {
               Diseño de Experiencia de Usuario e Interacciones (ux y ixd)
             </Typography>
           </Box>
+        </Box>
+      </Box>
+      <Box component="header" className={classes.mainContainer}>
+        <Typography variant="h4" align="center" className={classes.heading}>
+          SKILLS & TECHNOLOGIES
+        </Typography>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            ENGLISH
+          </Typography>
+          <Rating name="read-only" value={5} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            FRENCH
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            HTML5
+          </Typography>
+          <Rating name="read-only" value={5} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            CSS + SASS
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            JAVASCRIPT
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            REACT JS + HOOKS
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            ANGULAR JS
+          </Typography>
+          <Rating name="read-only" value={3} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            NODE JS / EXPRESS
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </Box>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            MYSQL + MONGODB
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
+        </Box>
+        <Box component="fieldset" borderColor="transparent">
+          <Typography style={{ color: 'tan' }} component="legend">
+            UX/UI DESIGN
+          </Typography>
+          <Rating name="read-only" value={4} readOnly />
         </Box>
       </Box>
     </React.Fragment>
