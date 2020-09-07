@@ -6,14 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
   mainContainer: {
     background: '#233',
   },
@@ -306,31 +298,18 @@ const Resume = () => {
         </Box>
       </Box>
 
-      <Box
-        component="header"
-        className={classes.root}
-        style={{ background: '#222' }}
-      >
+      <Box component="header" style={{ background: '#222' }}>
         <Typography variant="h4" align="center" className={classes.heading}>
           SKILLS & TECHNOLOGIES
         </Typography>
 
-        <Grid container spacing={3}>
+        <Grid container>
           <Grid item xs>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">
                 ENGLISH
               </Typography>
               <Rating name="read-only" value={5} readOnly />
-            </Box>
-          </Grid>
-
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                FRENCH
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
             </Box>
           </Grid>
 
@@ -362,7 +341,7 @@ const Resume = () => {
           </Grid>
         </Grid>
 
-        <Grid container spacing={3}>
+        <Grid container>
           <Grid item xs>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">
@@ -391,18 +370,9 @@ const Resume = () => {
           </Grid>
 
           <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                MYSQL/MONGODB
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
-            </Box>
-          </Grid>
-
-          <Grid item xs>
             <Box component="fieldset" borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">
-                ADOBE PS/AI/XD
+                MYSQL/MONGODB
               </Typography>
               <Rating name="read-only" value={4} readOnly />
             </Box>
