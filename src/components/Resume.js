@@ -109,8 +109,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Resume = () => {
-  const [value, setValue] = React.useState(2);
-
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -123,7 +121,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px' }}
+            style={{ borderRadius: '5px', border: 'none' }}
           >
             2007
           </Typography>
@@ -152,7 +150,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px' }}
+            style={{ borderRadius: '5px', border: 'none' }}
           >
             2012
           </Typography>
@@ -180,7 +178,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px' }}
+            style={{ borderRadius: '5px', border: 'none' }}
           >
             2018
           </Typography>
@@ -220,7 +218,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px' }}
+            style={{ borderRadius: '5px', border: 'none' }}
           >
             2007
           </Typography>
@@ -245,7 +243,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px' }}
+            style={{ borderRadius: '5px', border: 'none' }}
           >
             2010
           </Typography>
@@ -270,7 +268,7 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px' }}
+            style={{ borderRadius: '5px', border: 'none' }}
           >
             2019
           </Typography>
@@ -303,7 +301,12 @@ const Resume = () => {
           SKILLS & TECHNOLOGIES
         </Typography>
 
-        <Grid container style={{ paddingLeft: '60px' }}>
+        <Grid
+          container
+          style={{
+            textAlign: 'center',
+          }}
+        >
           <Grid item xs>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">
@@ -341,7 +344,12 @@ const Resume = () => {
           </Grid>
         </Grid>
 
-        <Grid container style={{ paddingLeft: '60px' }}>
+        <Grid
+          container
+          style={{
+            textAlign: 'center',
+          }}
+        >
           <Grid item xs>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography style={{ color: 'tan' }} component="legend">

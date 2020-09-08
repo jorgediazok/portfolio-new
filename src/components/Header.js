@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
   },
   typedContainer: {
     position: 'absolute',
-    top: '50%',
+    top: '55%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '100vw',
+    width: '100%',
     textAlign: 'center',
     zIndex: 1,
   },
@@ -37,12 +37,12 @@ const Header = () => {
         <Avatar className={classes.avatar} src={avatar} alt="Avatar"></Avatar>
       </Grid>
       <Typography className={classes.title} variant="h5">
-        <Typed strings={['JORGE DIAZ']} typeSpeed={40} />
+        <Typed strings={["HI, I'M JORGE."]} typeSpeed={40} />
       </Typography>
       <br />
       <Typography className={classes.subtitle} variant="h5">
         <Typed
-          strings={[' Full Stack Developer ', 'Web Design', 'MERN Stack']}
+          strings={[' Full Stack Developer ', 'UX Designer', 'MERN Stack']}
           typeSpeed={60}
           backSpeed={60}
           loop

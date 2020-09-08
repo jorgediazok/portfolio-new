@@ -47,25 +47,40 @@ const Portfolio = () => {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    Project 1
+                    Oscars Game Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                    dolorem labore numquam reprehenderit optio deserunt
-                    perspiciatis necessitatibus deleniti fuga. Consequatur!
+                    Juego diseñado para votar y que cada participante elija a
+                    sus candidatos a ganar la estatuilla en cada categoría
+                    disponible en los premios Oscars del año 2020. Reutilisable
+                    para otros años. Puro Vanilla Javascript.
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  Github
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/oscars-2020"
+                  >
+                    Github
+                  </a>
                 </Button>
                 <Button size="small" color="primary">
-                  Deploy
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://jorgediazok.github.io/oscars-2020/"
+                  >
+                    Deploy
+                  </a>
                 </Button>
               </CardActions>
             </Card>
