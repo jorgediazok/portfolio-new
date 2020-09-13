@@ -98,25 +98,40 @@ const Portfolio = () => {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    Project 2
+                    Gaming Website Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                    dolorem labore numquam reprehenderit optio deserunt
-                    perspiciatis necessitatibus deleniti fuga. Consequatur!
+                    Sitio web de venta de Consolas y Videojuegos. Shopping Cart
+                    con utilización de API REST, NodeJS, Express, localStorage y
+                    Formularios. CSS puro y Vanilla Javascript, sin frameworks.
+                    Base de datos en MongoDB Atlas.
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  Github
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/shopping-cart"
+                  >
+                    Github
+                  </a>
                 </Button>
                 <Button size="small" color="primary">
-                  Deploy
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/shopping-cart"
+                  >
+                    Deploy
+                  </a>
                 </Button>
               </CardActions>
             </Card>
