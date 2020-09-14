@@ -14,7 +14,7 @@ import {
 import Navbar from './Navbar';
 import project1 from '../assets/images/html-css-javascript-lg.jpg';
 import project2 from '../assets/images/javascript-fullstack.jpg';
-import project3 from '../assets/images/react-redux.jpg';
+import project3 from '../assets/images/mean-stack.jpg';
 import project4 from '../assets/images/mern-stack.jpg';
 
 const useStyles = makeStyles({
@@ -143,31 +143,46 @@ const Portfolio = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  alt="Project 2"
+                  alt="Project 3"
                   height="140"
                   image={project3}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    Project 3
+                    Sports Shopping Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                    dolorem labore numquam reprehenderit optio deserunt
-                    perspiciatis necessitatibus deleniti fuga. Consequatur!
+                    Este es un proyecto de simulación de un shopping cart de una
+                    tienda que vende elementos del mundo de los deportes. Está
+                    diseñada con Angular JS y el backend con NodeJS y MongoDB.
+                    Formulario de registro.
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  Github
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/angular-shopping"
+                  >
+                    Github
+                  </a>
                 </Button>
                 <Button size="small" color="primary">
-                  Deploy
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/shopping-cart"
+                  >
+                    Deploy
+                  </a>
                 </Button>
               </CardActions>
             </Card>
@@ -179,31 +194,46 @@ const Portfolio = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  alt="Project 2"
+                  alt="Project 4"
                   height="140"
                   image={project4}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    Project 4
+                    I Am Here Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                    dolorem labore numquam reprehenderit optio deserunt
-                    perspiciatis necessitatibus deleniti fuga. Consequatur!
+                    Proyecto de estilo Red Social en donde cada usuario se
+                    registra y puede compartir el lugar que visitó con otros
+                    usuarios a través de fotos y una descripción. Google Maps
+                    API integrada. Base de datos en MongoDB.
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  Github
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/MERN-Fullstack-App"
+                  >
+                    Github
+                  </a>
                 </Button>
                 <Button size="small" color="primary">
-                  Deploy
+                  <a
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/jorgediazok/shopping-cart"
+                  >
+                    Deploy
+                  </a>
                 </Button>
               </CardActions>
             </Card>

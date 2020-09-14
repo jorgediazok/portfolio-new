@@ -4,8 +4,21 @@ import { Typography, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import Grid from '@material-ui/core/Grid';
 import Navbar from './Navbar';
+import Image from '../assets/images/profile.jpg';
 
 const useStyles = makeStyles((theme) => ({
+  headerContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    paddingRight: '10%',
+    background: '#233',
+  },
+  profileImage: {
+    borderRadius: '50%',
+    maxHeight: '180px',
+    marginTop: '4em',
+    border: '2px solid #222',
+  },
   mainContainer: {
     background: '#233',
   },
@@ -113,6 +126,9 @@ const Resume = () => {
   return (
     <React.Fragment>
       <Navbar />
+      <Box className={classes.headerContainer}>
+        <img src={Image} alt="Me" className={classes.profileImage} />
+      </Box>
       <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
           Working Experience
