@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '3%',
     alignItems: 'center',
     background: '#222',
-    color: 'tomato',
+    color: 'tan',
     border: '2px solid tan',
     borderRadius: '5px',
   },
@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
   skills: {
     display: 'flex',
     flexWrap: 'wrap',
+    textAlign: 'center',
   },
   timeLine: {
     position: 'relative',
@@ -146,11 +147,11 @@ const Resume = () => {
       <Navbar />
       <Box className={classes.headerContainer}>
         <Typography variant="h6" align="center">
-          Hola! Soy Jorge, desarrollador Full Stack viviendo en Buenos Aires,
-          Argentina. Disfruto de capacitarme constantemente y aprender algo
-          nuevo todos los días. Tengo un background en marketing digital y
-          comunicación. Me gusta viajar, la música, las estadísticas y aprender
-          nuevos idiomas.
+          Hola! Soy <b>Jorge</b>, desarrollador Full Stack viviendo en Buenos
+          Aires, Argentina. Disfruto de capacitarme constantemente en nuevas
+          tecnologías y aprender algo nuevo todos los días. Tengo un background
+          en marketing y comunicación. Me gusta viajar, la música, las
+          analíticas y aprender nuevos idiomas.
         </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
@@ -347,13 +348,6 @@ const Resume = () => {
         <div className={classes.skills}>
           <Box component="fieldset" mb={3} borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
-              ENGLISH
-            </Typography>
-            <Rating name="read-only" value={5} readOnly />
-          </Box>
-
-          <Box component="fieldset" mb={3} borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
               HTML5
             </Typography>
             <Rating name="read-only" value={5} readOnly />
@@ -399,6 +393,13 @@ const Resume = () => {
               MYSQL/MONGODB
             </Typography>
             <Rating name="read-only" value={4} readOnly />
+          </Box>
+
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              ENGLISH
+            </Typography>
+            <Rating name="read-only" value={5} readOnly />
           </Box>
         </div>
       </Box>
