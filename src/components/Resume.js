@@ -2,28 +2,46 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
-import Grid from '@material-ui/core/Grid';
 import Navbar from './Navbar';
 import Image from '../assets/images/profile.jpg';
 
 const useStyles = makeStyles((theme) => ({
   headerContainer: {
     display: 'flex',
-    justifyContent: 'flex-end',
-    paddingRight: '10%',
-    background: '#233',
+    justifyContent: 'space-evenly',
+    margin: '3%',
+    padding: '2%',
+    maxHeight: '3%',
+    alignItems: 'center',
+    background: '#222',
+    color: 'tomato',
+    border: '2px solid tan',
+    borderRadius: '5px',
   },
+
   profileImage: {
     borderRadius: '50%',
     maxHeight: '180px',
-    marginTop: '4em',
+    margin: '1%',
     border: '2px solid #222',
   },
   mainContainer: {
-    background: '#233',
+    background: '#222',
+    margin: '3%',
+    border: '2px solid tan',
+    borderRadius: '5px',
   },
   mainContainer2: {
+    display: 'inline-block',
+    width: '94%',
     background: '#222',
+    marginLeft: '3%',
+    border: '2px solid tan',
+    borderRadius: '5px',
+  },
+  skills: {
+    display: 'flex',
+    flexWrap: 'wrap',
   },
   timeLine: {
     position: 'relative',
@@ -127,11 +145,18 @@ const Resume = () => {
     <React.Fragment>
       <Navbar />
       <Box className={classes.headerContainer}>
+        <Typography variant="h6" align="center">
+          Hola! Soy Jorge, desarrollador Full Stack viviendo en Buenos Aires,
+          Argentina. Disfruto de capacitarme constantemente y aprender algo
+          nuevo todos los días. Tengo un background en marketing digital y
+          comunicación. Me gusta viajar, la música, las estadísticas y aprender
+          nuevos idiomas.
+        </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
       <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
-          Working Experience
+          Work Experience
         </Typography>
         <Box component="div" className={classes.timeLine}>
           <Typography
@@ -226,7 +251,7 @@ const Resume = () => {
         </Box>
       </Box>
 
-      <Box component="header" className={classes.mainContainer2}>
+      <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
           Education & Certifications
         </Typography>
@@ -312,96 +337,70 @@ const Resume = () => {
         </Box>
       </Box>
 
-      <Box component="header" style={{ background: '#222' }}>
-        <Typography variant="h4" align="center" className={classes.heading}>
-          SKILLS & TECHNOLOGIES
-        </Typography>
+      <Box className={classes.mainContainer2}>
+        <div>
+          <Typography variant="h4" align="center" className={classes.heading}>
+            SKILLS & TECHNOLOGIES
+          </Typography>
+        </div>
 
-        <Grid
-          container
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                ENGLISH
-              </Typography>
-              <Rating name="read-only" value={5} readOnly />
-            </Box>
-          </Grid>
+        <div className={classes.skills}>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              ENGLISH
+            </Typography>
+            <Rating name="read-only" value={5} readOnly />
+          </Box>
 
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                HTML5
-              </Typography>
-              <Rating name="read-only" value={5} readOnly />
-            </Box>
-          </Grid>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              HTML5
+            </Typography>
+            <Rating name="read-only" value={5} readOnly />
+          </Box>
 
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                CSS + SASS
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
-            </Box>
-          </Grid>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              CSS + SASS
+            </Typography>
+            <Rating name="read-only" value={4} readOnly />
+          </Box>
 
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                JAVASCRIPT
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
-            </Box>
-          </Grid>
-        </Grid>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              JAVASCRIPT
+            </Typography>
+            <Rating name="read-only" value={4} readOnly />
+          </Box>
 
-        <Grid
-          container
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                REACTJS
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
-            </Box>
-          </Grid>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              REACTJS
+            </Typography>
+            <Rating name="read-only" value={4} readOnly />
+          </Box>
 
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                ANGULAR JS
-              </Typography>
-              <Rating name="read-only" value={3} readOnly />
-            </Box>
-          </Grid>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              ANGULAR JS
+            </Typography>
+            <Rating name="read-only" value={3} readOnly />
+          </Box>
 
-          <Grid item xs>
-            <Box component="fieldset" mb={3} borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                NODE/EXPRESS
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
-            </Box>
-          </Grid>
+          <Box component="fieldset" mb={3} borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              NODEJS
+            </Typography>
+            <Rating name="read-only" value={4} readOnly />
+          </Box>
 
-          <Grid item xs>
-            <Box component="fieldset" borderColor="transparent">
-              <Typography style={{ color: 'tan' }} component="legend">
-                MYSQL/MONGODB
-              </Typography>
-              <Rating name="read-only" value={4} readOnly />
-            </Box>
-          </Grid>
-        </Grid>
+          <Box component="fieldset" borderColor="transparent">
+            <Typography style={{ color: 'tan' }} component="legend">
+              MYSQL/MONGODB
+            </Typography>
+            <Rating name="read-only" value={4} readOnly />
+          </Box>
+        </div>
       </Box>
     </React.Fragment>
   );
