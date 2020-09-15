@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-evenly',
     margin: '3%',
     padding: '2%',
-    maxHeight: '3%',
     alignItems: 'center',
     background: '#222',
     color: 'tan',
@@ -38,11 +37,13 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '3%',
     border: '2px solid tan',
     borderRadius: '5px',
+    marginBottom: '3%',
   },
   skills: {
     display: 'flex',
+    justifyContent: 'space-between',
     flexWrap: 'wrap',
-    textAlign: 'center',
+    paddingBottom: '1%',
   },
   timeLine: {
     position: 'relative',
@@ -148,10 +149,9 @@ const Resume = () => {
       <Box className={classes.headerContainer}>
         <Typography variant="h6" align="center">
           Hola! Soy <b>Jorge</b>, desarrollador Full Stack viviendo en Buenos
-          Aires, Argentina. Disfruto de capacitarme constantemente en nuevas
-          tecnologías y aprender algo nuevo todos los días. Tengo un background
-          en marketing y comunicación. Me gusta viajar, la música, las
-          analíticas y aprender nuevos idiomas.
+          Aires, Argentina. Disfruto de practicar y aprender diariamente nuevas
+          tecnologías. Tengo un background en marketing y comunicación. Me gusta
+          viajar, la música, las analíticas y aprender nuevos idiomas.
         </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
@@ -346,42 +346,42 @@ const Resume = () => {
         </div>
 
         <div className={classes.skills}>
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               HTML5
             </Typography>
             <Rating name="read-only" value={5} readOnly />
           </Box>
 
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               CSS + SASS
             </Typography>
             <Rating name="read-only" value={4} readOnly />
           </Box>
 
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               JAVASCRIPT
             </Typography>
             <Rating name="read-only" value={4} readOnly />
           </Box>
 
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               REACTJS
             </Typography>
             <Rating name="read-only" value={4} readOnly />
           </Box>
 
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               ANGULAR JS
             </Typography>
             <Rating name="read-only" value={3} readOnly />
           </Box>
 
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               NODEJS
             </Typography>
@@ -395,7 +395,7 @@ const Resume = () => {
             <Rating name="read-only" value={4} readOnly />
           </Box>
 
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" borderColor="transparent">
             <Typography style={{ color: 'tan' }} component="legend">
               ENGLISH
             </Typography>

@@ -46,13 +46,18 @@ const Portfolio = () => {
                   image={project1}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    style={{ textAlign: 'center' }}
+                  >
                     Oscars Game Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
+                    style={{ textAlign: 'center' }}
                   >
                     Juego diseñado para votar y que cada participante elija a
                     sus candidatos a ganar la estatuilla en cada categoría
@@ -61,7 +66,9 @@ const Portfolio = () => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
+              <CardActions
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
                 <Button size="small" color="primary">
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
@@ -97,13 +104,18 @@ const Portfolio = () => {
                   image={project2}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    style={{ textAlign: 'center' }}
+                  >
                     Gaming Website Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
+                    style={{ textAlign: 'center' }}
                   >
                     Sitio web de venta de Consolas y Videojuegos. Shopping Cart
                     con utilización de API REST, NodeJS, Express, localStorage y
@@ -112,7 +124,9 @@ const Portfolio = () => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
+              <CardActions
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
                 <Button size="small" color="primary">
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
@@ -148,13 +162,18 @@ const Portfolio = () => {
                   image={project3}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    style={{ textAlign: 'center' }}
+                  >
                     Sports Shopping Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
+                    style={{ textAlign: 'center' }}
                   >
                     Este es un proyecto de simulación de un shopping cart de una
                     tienda que vende elementos del mundo de los deportes. Está
@@ -163,7 +182,9 @@ const Portfolio = () => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
+              <CardActions
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
                 <Button size="small" color="primary">
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
@@ -199,13 +220,18 @@ const Portfolio = () => {
                   image={project4}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5">
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    style={{ textAlign: 'center' }}
+                  >
                     I Am Here Project
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
+                    style={{ textAlign: 'center' }}
                   >
                     Proyecto de estilo Red Social en donde cada usuario se
                     registra y puede compartir el lugar que visitó con otros
@@ -214,7 +240,9 @@ const Portfolio = () => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
+              <CardActions
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
                 <Button size="small" color="primary">
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
