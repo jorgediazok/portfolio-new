@@ -4,4 +4,5 @@ body {
   -moz-background: cover;
   -o-background: cover;
   background: cover;
+  height: 100vh;
 }
