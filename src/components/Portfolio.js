@@ -112,8 +112,8 @@ const Portfolio = () => {
                     style={{ textAlign: 'center' }}>
                     Sitio web de venta de Consolas y Videojuegos. Shopping Cart
                     con utilización de API REST, NodeJS, Express, localStorage y
-                    Formularios. CSS puro y Vanilla Javascript, sin frameworks.
-                    Base de datos en MongoDB Atlas.
+                    Formularios. CSS y Vanilla Javascript, sin frameworks. Base
+                    de datos en MongoDB Atlas.
                   </Typography>
                 </CardContent>
               </CardActionArea>
