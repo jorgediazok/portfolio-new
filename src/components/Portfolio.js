@@ -133,7 +133,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/shopping-cart">
+                    href="https://gaming-shoppingcart.herokuapp.com/index.html">
                     Deploy
                   </a>
                 </Button>
