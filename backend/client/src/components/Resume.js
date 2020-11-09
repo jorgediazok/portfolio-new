@@ -162,7 +162,7 @@ const Resume = () => {
           Stack de Buenos Aires, Argentina 🇦🇷. Progamo mayormente en ReactJS
           pero disfruto de aprender nuevas tecnologías👨‍💻. Tengo un background en
           marketing, diseño UX y comunicación social 📰. Me gusta viajar, las
-          analíticas y aprender nuevos idiomas 🚀.
+          analíticas y aprender nuevos idiomas 🚀🚀.
         </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
@@ -190,9 +190,9 @@ const Resume = () => {
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}>
-              • Investigación de mercado en Argentina. Trabajo con equipos en
-              Latam. <br /> • Análisis de métricas y comparación de productos
-              disponibles en tiendas físicas y online <br /> • Armado y
+              •Investigación de mercado en Argentina. Trabajo con equipos en
+              Latam. <br /> •Análisis de métricas y comparación de productos
+              disponibles en tiendas físicas y online <br /> •Armado y
               presentación de informes con deadlines.
             </Typography>
           </Box>
@@ -216,9 +216,9 @@ const Resume = () => {
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}>
-              • Administrativo/Data entry, facturación de prestaciones médicas
-              con sistema propio. <br /> • Logística, manejo y organización de
-              documentación pública. Manejo de Nomenclador <br /> • Trabajo con
+              •Administrativo/Data entry, facturación de prestaciones médicas
+              con sistema propio. <br /> •Logística, manejo y organización de
+              documentación pública. Manejo de Nomenclador <br /> •Trabajo con
               base de datos a través de MYSQL. <br />
             </Typography>
           </Box>
@@ -241,10 +241,9 @@ const Resume = () => {
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}>
-              • Trabajos de desarrollo web de manera Freelance. <br />
-              • Utilización de frameworks como AngularJS y ReactJS en el
-              Frontend y NodeJS y MongoDB en Backend. <br /> • Responsive
-              Design.
+              •Trabajos de desarrollo web de manera Freelance. <br />
+              •Utilización de frameworks como AngularJS y ReactJS en el Frontend
+              y NodeJS y MongoDB en Backend. <br /> • Responsive Design.
               <br />
               •Conocimientos en Diseño UX, UI y IxD aplicados en proyectos
               <br />• Participé también en proyectos grupales como la creación

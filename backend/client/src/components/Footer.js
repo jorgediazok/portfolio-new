@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import Facebook from '@material-ui/icons/Facebook';
+import MailOutline from '@material-ui/icons/MailOutline';
 import GitHub from '@material-ui/icons/GitHub';
 import Linkedin from '@material-ui/icons/LinkedIn';
 
@@ -27,17 +27,15 @@ const Footer = () => {
     <React.Fragment>
       <BottomNavigation
         showLabels={false}
-        style={{ background: '#222', width: 'auto' }}
-      >
+        style={{ background: '#222', width: 'auto' }}>
         <BottomNavigationAction
-          href="//facebook.com"
+          href="mailto:jorgediazok@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.root}
           style={{ padding: '0' }}
           showLabel={false}
-          icon={<Facebook />}
-        ></BottomNavigationAction>
+          icon={<MailOutline />}></BottomNavigationAction>
 
         <BottomNavigationAction
           href="//github.com/jorgediazok"
@@ -46,8 +44,7 @@ const Footer = () => {
           className={classes.root}
           style={{ padding: '0' }}
           showLabel={false}
-          icon={<GitHub />}
-        ></BottomNavigationAction>
+          icon={<GitHub />}></BottomNavigationAction>
 
         <BottomNavigationAction
           href="//www.linkedin.com/in/jorgediaz1984/"
@@ -56,8 +53,7 @@ const Footer = () => {
           className={classes.root}
           style={{ padding: '0' }}
           showLabel={false}
-          icon={<Linkedin />}
-        ></BottomNavigationAction>
+          icon={<Linkedin />}></BottomNavigationAction>
       </BottomNavigation>
     </React.Fragment>
   );
