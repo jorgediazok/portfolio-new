@@ -25,10 +25,12 @@ function Alert(props) {
 const useStyles = makeStyles((theme) => ({
   form: {
     width: '300px',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '4%',
+    padding: '10px',
   },
   button: {
     marginTop: '1rem',
