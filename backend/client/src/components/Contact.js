@@ -147,6 +147,7 @@ const Contact = () => {
             </Typography>
 
             <InputField
+              style={{ marginTop: '10px' }}
               id="name"
               fullWidth={true}
               label="Name"
@@ -163,6 +164,7 @@ const Contact = () => {
             </p>
 
             <InputField
+              style={{ marginTop: '-5px' }}
               id="email"
               fullWidth={true}
               label="Email"
@@ -179,6 +181,7 @@ const Contact = () => {
             </p>
 
             <InputField
+              style={{ marginTop: '-5px' }}
               id="country"
               fullWidth={true}
               label="Country"
@@ -199,6 +202,7 @@ const Contact = () => {
               multiline
               margin="dense"
               inputProps={{ style: { color: 'white' } }}
+              style={{ marginTop: '20px' }}
               rows={4}
               size="medium"
               value={textarea}
