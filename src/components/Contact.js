@@ -139,8 +139,7 @@ const Contact = () => {
             method="POST"
             action="/api/form"
             onSubmit={handleSubmit(formSubmit)}
-            className={classes.form}
-          >
+            className={classes.form}>
             <Typography className={classes.heading} variant="h5">
               Contact me !
             </Typography>
@@ -156,8 +155,7 @@ const Contact = () => {
               margin="dense"
               size="medium"
               inputRef={register({ required: true })}
-              onChange={handleChange}
-            ></InputField>
+              onChange={handleChange}></InputField>
             <p style={{ color: 'tomato' }}>
               {errors.name && 'Please add your Name'}
             </p>
@@ -173,8 +171,7 @@ const Contact = () => {
               value={email}
               size="medium"
               inputRef={register({ required: true })}
-              onChange={handleChange}
-            ></InputField>
+              onChange={handleChange}></InputField>
             <p style={{ color: 'tomato' }}>
               {errors.email && 'Please write your Email'}
             </p>
@@ -189,8 +186,7 @@ const Contact = () => {
               margin="dense"
               value={country}
               size="medium"
-              onChange={handleChange}
-            ></InputField>
+              onChange={handleChange}></InputField>
 
             <InputField
               id="textarea"
@@ -205,8 +201,7 @@ const Contact = () => {
               size="medium"
               value={textarea}
               inputRef={register({ required: true })}
-              onChange={handleChange}
-            ></InputField>
+              onChange={handleChange}></InputField>
             <p style={{ color: 'tomato' }}>
               {errors.textarea && 'Do not forget your message :)'}
             </p>
@@ -216,8 +211,7 @@ const Contact = () => {
               className={classes.button}
               variant="outlined"
               fullWidth={true}
-              endIcon={<SendIcon />}
-            >
+              endIcon={<SendIcon />}>
               Contact
             </Button>
           </form>
@@ -225,8 +219,7 @@ const Contact = () => {
             open={open}
             autoHideDuration={4000}
             onClose={handleClose}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-          >
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
             <Alert onClose={handleClose} variant="standard" severity="success">
               Message Sent
             </Alert>
