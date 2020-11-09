@@ -16,6 +16,16 @@ const useStyles = makeStyles((theme) => ({
     color: 'tan',
     border: '2px solid tan',
     borderRadius: '5px',
+    textAlign: 'center',
+    hyphens: 'auto',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column-reverse',
+      textAlign: 'justify',
+      textJustify: 'inter-word',
+      padding: '10px',
+      fontSize: '0.3em',
+      hyphens: 'auto',
+    },
   },
 
   profileImage: {
@@ -147,11 +157,12 @@ const Resume = () => {
     <React.Fragment>
       <Navbar />
       <Box className={classes.headerContainer}>
-        <Typography variant="h6" align="center">
-          Hola! Soy <b>Jorge</b>, desarrollador Full Stack viviendo en Buenos
-          Aires, Argentina. Disfruto de practicar y aprender diariamente nuevas
-          tecnologías. Tengo un background en marketing y comunicación. Me gusta
-          viajar, la música, las analíticas y aprender nuevos idiomas.
+        <Typography variant="h6" align="justify">
+          Hola! Soy <b style={{ color: 'tomato' }}>Jorge</b>, Desarrollador Full
+          Stack de Buenos Aires, Argentina 🇦🇷. Progamo mayormente en ReactJS
+          pero disfruto de aprender nuevas tecnologías👨‍💻. Tengo un background en
+          marketing, diseño UX y comunicación social 📰. Me gusta viajar, las
+          analíticas y aprender nuevos idiomas 🚀.
         </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
@@ -163,16 +174,14 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}
-          >
+            style={{ borderRadius: '5px', border: 'none' }}>
             2007
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
-              style={{ color: 'tomato' }}
-            >
+              style={{ color: 'tomato' }}>
               Market Research
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
@@ -180,8 +189,7 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}
-            >
+              style={{ color: 'tan', textAlign: 'justify' }}>
               • Investigación de mercado en Argentina. Trabajo con equipos en
               Latam. <br /> • Análisis de métricas y comparación de productos
               disponibles en tiendas físicas y online <br /> • Armado y
@@ -192,16 +200,14 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}
-          >
+            style={{ borderRadius: '5px', border: 'none' }}>
             2012
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
-              style={{ color: 'tomato' }}
-            >
+              style={{ color: 'tomato' }}>
               Data Entry / Data Base Control
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
@@ -209,8 +215,7 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}
-            >
+              style={{ color: 'tan', textAlign: 'justify' }}>
               • Administrativo/Data entry, facturación de prestaciones médicas
               con sistema propio. <br /> • Logística, manejo y organización de
               documentación pública. Manejo de Nomenclador <br /> • Trabajo con
@@ -220,16 +225,14 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}
-          >
+            style={{ borderRadius: '5px', border: 'none' }}>
             2018
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
-              style={{ color: 'tomato' }}
-            >
+              style={{ color: 'tomato' }}>
               Full Stack / Web Design
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
@@ -237,8 +240,7 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}
-            >
+              style={{ color: 'tan', textAlign: 'justify' }}>
               • Trabajos de desarrollo web de manera Freelance. <br />
               • Utilización de frameworks como AngularJS y ReactJS en el
               Frontend y NodeJS y MongoDB en Backend. <br /> • Responsive
@@ -260,16 +262,14 @@ const Resume = () => {
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}
-          >
+            style={{ borderRadius: '5px', border: 'none' }}>
             2007
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
-              style={{ color: 'tomato' }}
-            >
+              style={{ color: 'tomato' }}>
               Tecnicatura en Sonido y Grabación.
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
@@ -277,24 +277,21 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}
-            >
+              style={{ color: 'tan', textAlign: 'justify' }}>
               • Mezcla, grabación y masterización de sonido. Sonido en vivo.
             </Typography>
           </Box>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}
-          >
+            style={{ borderRadius: '5px', border: 'none' }}>
             2010
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
-              style={{ color: 'tomato' }}
-            >
+              style={{ color: 'tomato' }}>
               Licenciatura en Ciencias de la Comunicación.
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
@@ -302,24 +299,21 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}
-            >
+              style={{ color: 'tan', textAlign: 'justify' }}>
               • Especialización en periodismo y transmedia. Promedio general: 8.
             </Typography>
           </Box>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}
-          >
+            style={{ borderRadius: '5px', border: 'none' }}>
             2019
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
-              style={{ color: 'tomato' }}
-            >
+              style={{ color: 'tomato' }}>
               IT Certifications.
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
@@ -327,8 +321,7 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}
-            >
+              style={{ color: 'tan', textAlign: 'justify' }}>
               • Professional Full-Stack Developer: Desarrollo con ReactJS,
               AngularJS, NodeJS, MYSQL y MongoDB. <br /> • Desarrollo web en
               HTML 5, CSS3 y Javascript (nivel avanzado) <br />• Experto en

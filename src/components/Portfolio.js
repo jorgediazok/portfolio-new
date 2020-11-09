@@ -80,7 +80,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://jorgediazok.github.io/oscars-2020/">
+                    href="https://elated-kepler-e1c51d.netlify.app/">
                     Deploy
                   </a>
                 </Button>
@@ -209,7 +209,7 @@ const Portfolio = () => {
                     gutterBottom
                     variant="h5"
                     style={{ textAlign: 'center' }}>
-                    I Am Here Project
+                    Post Your Moments App
                   </Typography>
                   <Typography
                     variant="body2"
@@ -217,9 +217,9 @@ const Portfolio = () => {
                     component="p"
                     style={{ textAlign: 'center' }}>
                     Proyecto de estilo Red Social en donde cada usuario se
-                    registra y puede compartir el lugar que visitó con otros
-                    usuarios a través de fotos y una descripción. Google Maps
-                    API integrada. Base de datos en MongoDB.
+                    registra y puede compartir momentos de su vida. Hecha con
+                    React-Redux, Express, Node y Base de datos en Mongo DB.
+                    Frontend con MaterialUI y styled components.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -239,7 +239,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/shopping-cart">
+                    href="https://post-your-moments.herokuapp.com/">
                     Deploy
                   </a>
                 </Button>
