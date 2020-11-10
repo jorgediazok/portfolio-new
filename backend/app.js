@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const path = require('path');
 
 //Check
 const app = express();
@@ -17,8 +18,9 @@ const userCredentials = process.env.USER_CREDENTIALS;
 const passCredentials = process.env.USER_PASSWORD;
 
 //Check
+app.use(express.static('client/build/'));
 app.get('/', (req, res) => {
-  res.send('Hello');
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 
 app.post('/api/form', async (req, res) => {
