@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '180px',
     margin: '1%',
     border: '2px solid #222',
+    [theme.breakpoints.down('xs')]: {
+      maxHeight: '140px',
+    },
   },
   mainContainer: {
     background: '#222',
@@ -166,253 +169,257 @@ const Resume = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Box className={classes.headerContainer}>
-        <Typography
-          variant="h6"
-          align="justify"
-          className={classes.headerTypography}>
-          Hola! Soy{' '}
-          <b style={{ color: 'tomato', textAlign: 'center' }}>Jorge</b>,
-          Desarrollador Full Stack de Buenos Aires, Argentina 🇦🇷. Progamo
-          principalmente en React pero disfruto de aprender nuevas tecnologías
-          👨‍💻. Tengo conocimientos en marketing digital, diseño UX y comunicación
-          📰. Me gusta viajar, el trabajo en equipo y estudiar idiomas 🚀.
-        </Typography>
-        <img src={Image} alt="Me" className={classes.profileImage} />
-      </Box>
-      <Box component="header" className={classes.mainContainer}>
-        <Typography variant="h4" align="center" className={classes.heading}>
-          Work Experience
-        </Typography>
-        <Box component="div" className={classes.timeLine}>
+      <Box style={{ height: '100%' }}>
+        <Box className={classes.headerContainer}>
           <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2020
+            variant="h6"
+            align="justify"
+            className={classes.headerTypography}>
+            Hola! Soy{' '}
+            <b style={{ color: 'tomato', textAlign: 'center' }}>Jorge</b>,
+            Desarrollador Full Stack de Buenos Aires, Argentina 🇦🇷. Progamo
+            principalmente en React pero disfruto de aprender nuevas tecnologías
+            👨‍💻. Tengo conocimientos en marketing digital, diseño UX y
+            comunicación 📰. Me gusta viajar, el trabajo en equipo y estudiar
+            idiomas 🚀.
           </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Full Stack / Web Design
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              Freelance.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{
-                color: 'tan',
-                justifyContent: 'justify',
-                hyphens: 'auto',
-              }}>
-              •Trabajos de desarrollo web de manera Freelance. <br />
-              •Utilización de ReactJS en el Frontend y NodeJS y MongoDB en
-              Backend. API rest. Responsive Design.
-              <br />
-              •Participación en proyectos grupales: creación de un Chatbot.
-            </Typography>
-          </Box>
-
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2018
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Data Entry / Data Base Control
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              RecHospi Agrupación.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
-              •Administrativo/Data entry, facturación de prestaciones médicas.
-              <br /> •Logística y organización de documentación pública con
-              manejo de Nomenclador Nacional. <br /> •Trabajo con base de datos
-              a través de MYSQL. <br />
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2012
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Market Research
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              GFK/IFR Monitoring.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
-              •Investigación de mercado en Argentina y Latam. Trabajo en equipo.
-              <br /> •Análisis de métricas de productos disponibles en tiendas
-              físicas y online <br /> •Armado y presentación de informes con
-              deadlines.
-            </Typography>
-          </Box>
+          <img src={Image} alt="Me" className={classes.profileImage} />
         </Box>
-      </Box>
-
-      <Box component="header" className={classes.mainContainer}>
-        <Typography variant="h4" align="center" className={classes.heading}>
-          Education & Certifications
-        </Typography>
-        <Box component="div" className={classes.timeLine}>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2020
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              IT Courses
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              Universidad Tecnológica Nacional (UTN) / Codo a Codo (GCBA)
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
-              •Diplomatura Professional Full Stack: ReactJS, Angular, Express,
-              Node y MongoDB. <br />
-              •Programa Codo a Codo Full Stack con orientación en Python.
-              Introducción a Metodologías ágiles. <br />
-              •Desarrollo web en HTML 5, CSS3 y Javascript.
-              <br />
-              •Experto en Diseño de Experiencia de Usuario e Interacciones.
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2018
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Licenciatura en Ciencias de la Comunicación.
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              Universidad de Buenos Aires. (UBA)
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}>
-              •Orientación en periodismo. Promedio general: 8.
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2010
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Tecnicatura en Sonido y Grabación.
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              Taller de Música de Buenos Aires (TAMABA)
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}>
-              •Mezcla y grabación de sonido. Sonido en vivo.
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-
-      <Box className={classes.mainContainer2}>
-        <div>
+        <Box component="header" className={classes.mainContainer}>
           <Typography variant="h4" align="center" className={classes.heading}>
-            SKILLS & TECHNOLOGIES
+            Work Experience
           </Typography>
-        </div>
-
-        <div className={classes.skills}>
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              HTML5
+          <Box component="div" className={classes.timeLine}>
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+              style={{ borderRadius: '5px', border: 'none' }}>
+              2020
             </Typography>
-            <Rating name="read-only" value={5} readOnly />
-          </Box>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ color: 'tomato' }}>
+                Full Stack / Web Design
+              </Typography>
+              <Typography variant="body1" style={{ color: 'tomato' }}>
+                Freelance.
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{
+                  color: 'tan',
+                  justifyContent: 'justify',
+                  hyphens: 'auto',
+                }}>
+                •Trabajos de desarrollo web de manera Freelance. <br />
+                •Utilización de ReactJS en el Frontend y NodeJS y MongoDB en
+                Backend. API rest. Responsive Design.
+                <br />
+                •Participación en proyectos grupales: creación de un Chatbot.
+              </Typography>
+            </Box>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              CSS + SASS
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+              style={{ borderRadius: '5px', border: 'none' }}>
+              2018
             </Typography>
-            <Rating name="read-only" value={4} readOnly />
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ color: 'tomato' }}>
+                Data Entry / Data Base Control
+              </Typography>
+              <Typography variant="body1" style={{ color: 'tomato' }}>
+                RecHospi Agrupación.
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
+                •Administrativo/Data entry, facturación de prestaciones médicas.
+                <br /> •Logística y organización de documentación pública con
+                manejo de Nomenclador Nacional. <br /> •Trabajo con base de
+                datos a través de MYSQL. <br />
+              </Typography>
+            </Box>
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+              style={{ borderRadius: '5px', border: 'none' }}>
+              2012
+            </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ color: 'tomato' }}>
+                Market Research
+              </Typography>
+              <Typography variant="body1" style={{ color: 'tomato' }}>
+                GFK/IFR Monitoring.
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
+                •Investigación de mercado en Argentina y Latam. Trabajo en
+                equipo.
+                <br /> •Análisis de métricas de productos disponibles en tiendas
+                físicas y online <br /> •Armado y presentación de informes con
+                deadlines.
+              </Typography>
+            </Box>
           </Box>
+        </Box>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              JAVASCRIPT
+        <Box component="header" className={classes.mainContainer}>
+          <Typography variant="h4" align="center" className={classes.heading}>
+            Education & Certifications
+          </Typography>
+          <Box component="div" className={classes.timeLine}>
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+              style={{ borderRadius: '5px', border: 'none' }}>
+              2020
             </Typography>
-            <Rating name="read-only" value={4} readOnly />
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ color: 'tomato' }}>
+                IT Courses
+              </Typography>
+              <Typography variant="body1" style={{ color: 'tomato' }}>
+                Universidad Tecnológica Nacional (UTN) / Codo a Codo (GCBA)
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
+                •Diplomatura Professional Full Stack: ReactJS, Angular, Express,
+                Node y MongoDB. <br />
+                •Programa Codo a Codo Full Stack con orientación en Python.
+                Introducción a Metodologías ágiles. <br />
+                •Desarrollo web en HTML 5, CSS3 y Javascript.
+                <br />
+                •Experto en Diseño de Experiencia de Usuario e Interacciones.
+              </Typography>
+            </Box>
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+              style={{ borderRadius: '5px', border: 'none' }}>
+              2018
+            </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ color: 'tomato' }}>
+                Licenciatura en Ciencias de la Comunicación.
+              </Typography>
+              <Typography variant="body1" style={{ color: 'tomato' }}>
+                Universidad de Buenos Aires. (UBA)
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{ color: 'tan', textAlign: 'justify' }}>
+                •Orientación en periodismo. Promedio general: 8.
+              </Typography>
+            </Box>
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+              style={{ borderRadius: '5px', border: 'none' }}>
+              2010
+            </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                className={classes.subHeading}
+                style={{ color: 'tomato' }}>
+                Tecnicatura en Sonido y Grabación.
+              </Typography>
+              <Typography variant="body1" style={{ color: 'tomato' }}>
+                Taller de Música de Buenos Aires (TAMABA)
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                style={{ color: 'tan', textAlign: 'justify' }}>
+                •Mezcla y grabación de sonido. Sonido en vivo.
+              </Typography>
+            </Box>
           </Box>
+        </Box>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              REACTJS
+        <Box className={classes.mainContainer2}>
+          <div>
+            <Typography variant="h4" align="center" className={classes.heading}>
+              SKILLS & TECHNOLOGIES
             </Typography>
-            <Rating name="read-only" value={4} readOnly />
-          </Box>
+          </div>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              ANGULAR JS
-            </Typography>
-            <Rating name="read-only" value={3} readOnly />
-          </Box>
+          <div className={classes.skills}>
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                HTML5
+              </Typography>
+              <Rating name="read-only" value={5} readOnly />
+            </Box>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              NODEJS
-            </Typography>
-            <Rating name="read-only" value={4} readOnly />
-          </Box>
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                CSS + SASS
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              MYSQL/MONGODB
-            </Typography>
-            <Rating name="read-only" value={4} readOnly />
-          </Box>
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                JAVASCRIPT
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
 
-          <Box component="fieldset" borderColor="transparent">
-            <Typography style={{ color: 'tan' }} component="legend">
-              ENGLISH
-            </Typography>
-            <Rating name="read-only" value={5} readOnly />
-          </Box>
-        </div>
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                REACTJS
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                ANGULAR JS
+              </Typography>
+              <Rating name="read-only" value={3} readOnly />
+            </Box>
+
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                NODEJS
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                MYSQL/MONGODB
+              </Typography>
+              <Rating name="read-only" value={4} readOnly />
+            </Box>
+
+            <Box component="fieldset" borderColor="transparent">
+              <Typography style={{ color: 'tan' }} component="legend">
+                ENGLISH
+              </Typography>
+              <Rating name="read-only" value={5} readOnly />
+            </Box>
+          </div>
+        </Box>
       </Box>
     </React.Fragment>
   );

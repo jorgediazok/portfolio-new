@@ -25,6 +25,7 @@ import {
   ContactMail,
 } from '@material-ui/icons';
 
+// @ts-ignore
 import avatar from '../assets/images/avatar.png';
 
 //Icons
@@ -88,8 +89,7 @@ const Navbar = () => {
     <Box
       component="div"
       className={classes.menuSliderContainer}
-      onClick={toggleSlider(slider, false)}
-    >
+      onClick={toggleSlider(slider, false)}>
       <Avatar src={avatar} alt="Avatar" className={classes.avatar} />
       <Divider />
       <List>
@@ -122,8 +122,7 @@ const Navbar = () => {
             <MobilRightMenuSlider
               anchor="right"
               open={state.right}
-              onClose={toggleSlider('right', false)}
-            >
+              onClose={toggleSlider('right', false)}>
               {sideList('right')}
               <Footer />
             </MobilRightMenuSlider>

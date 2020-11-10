@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -19,7 +20,7 @@ import project4 from '../assets/images/mern-stack.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
-    background: '#233',
+    background: '#3C3B3A',
     height: '100%',
   },
   cardContainer: {

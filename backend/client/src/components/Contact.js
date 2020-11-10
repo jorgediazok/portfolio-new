@@ -135,7 +135,7 @@ const Contact = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Box component="div" style={{ background: '#233', height: '100vh' }}>
+      <Box component="div" style={{ background: '#3C3B3A', height: '100vh' }}>
         <Grid container justify="center">
           <form
             method="POST"
