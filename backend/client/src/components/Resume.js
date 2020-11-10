@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
-import CheckOutlined from '@material-ui/icons/CheckOutlined';
 import Navbar from './Navbar';
 // @ts-ignore
 import Image from '../assets/images/profile.jpg';

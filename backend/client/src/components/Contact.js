@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     marginTop: '4%',
     padding: '10px',
+    height: '100%',
   },
   button: {
-    marginTop: '1rem',
     color: 'tomato',
     borderColor: 'tomato',
   },
