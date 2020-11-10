@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
+import CheckOutlined from '@material-ui/icons/CheckOutlined';
 import Navbar from './Navbar';
 // @ts-ignore
 import Image from '../assets/images/profile.jpg';
@@ -24,8 +25,16 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'justify',
       textJustify: 'inter-word',
       padding: '10px',
-      fontSize: '0.3em',
+      fontSize: '10px',
       hyphens: 'auto',
+    },
+  },
+
+  headerTypography: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.7em',
+      hyphens: 'auto',
+      marginTop: '10px',
     },
   },
 
@@ -158,12 +167,17 @@ const Resume = () => {
     <React.Fragment>
       <Navbar />
       <Box className={classes.headerContainer}>
-        <Typography variant="h6" align="justify">
-          Hola! Soy <b style={{ color: 'tomato' }}>Jorge</b>, Desarrollador Full
-          Stack de Buenos Aires, Argentina 🇦🇷. Progamo mayormente en ReactJS
-          pero disfruto de aprender nuevas tecnologías👨‍💻. Tengo un background en
-          marketing, diseño UX y comunicación social 📰. Me gusta viajar, las
-          analíticas y aprender nuevos idiomas 🚀🚀.
+        <Typography
+          variant="h6"
+          align="justify"
+          className={classes.headerTypography}>
+          Hola! Soy{' '}
+          <b style={{ color: 'tomato', textAlign: 'center' }}>Jorge</b>,
+          Desarrollador Full Stack de Buenos Aires, Argentina 🇦🇷. Progamo
+          principalmente en React pero disfruto de aprender nuevas tecnologías
+          👨‍💻. Tengo conocimientos en marketing digital, diseño UX y comunicación
+          📰. Me gusta viajar, trabajar en equipo, las analíticas y estudiar
+          idiomas 🚀.
         </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
@@ -176,58 +190,7 @@ const Resume = () => {
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
             style={{ borderRadius: '5px', border: 'none' }}>
-            2007
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Market Research
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              GFK/IFR Monitoring.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}>
-              •Investigación de mercado en Argentina. Trabajo con equipos en
-              Latam. <br /> •Análisis de métricas y comparación de productos
-              disponibles en tiendas físicas y online <br /> •Armado y
-              presentación de informes con deadlines.
-            </Typography>
-          </Box>
-
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2012
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              className={classes.subHeading}
-              style={{ color: 'tomato' }}>
-              Data Entry / Data Base Control
-            </Typography>
-            <Typography variant="body1" style={{ color: 'tomato' }}>
-              RecHospi Agrupación.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}>
-              •Administrativo/Data entry, facturación de prestaciones médicas
-              con sistema propio. <br /> •Logística, manejo y organización de
-              documentación pública. Manejo de Nomenclador <br /> •Trabajo con
-              base de datos a través de MYSQL. <br />
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
-            style={{ borderRadius: '5px', border: 'none' }}>
-            2018
+            2020
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -241,14 +204,67 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}>
+              style={{
+                color: 'tan',
+                justifyContent: 'justify',
+                hyphens: 'auto',
+              }}>
               •Trabajos de desarrollo web de manera Freelance. <br />
-              •Utilización de frameworks como AngularJS y ReactJS en el Frontend
-              y NodeJS y MongoDB en Backend. <br /> • Responsive Design.
+              •Utilización de ReactJS en el Frontend y NodeJS y MongoDB en
+              Backend. API rest. <br /> •Responsive Design.
               <br />
-              •Conocimientos en Diseño UX, UI y IxD aplicados en proyectos
-              <br />• Participé también en proyectos grupales como la creación
-              de un Chatbot.
+              •Participación en proyectos grupales: creación de un Chatbot.
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px', border: 'none' }}>
+            2018
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}>
+              Data Entry / Data Base Control
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              RecHospi Agrupación.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
+              •Administrativo/Data entry, facturación de prestaciones médicas.
+              <br /> •Logística y organización de documentación pública con
+              manejo de Nomenclador Nacional <br /> •Trabajo con base de datos a
+              través de MYSQL. <br />
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem} `}
+            style={{ borderRadius: '5px', border: 'none' }}>
+            2012
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              className={classes.subHeading}
+              style={{ color: 'tomato' }}>
+              Market Research
+            </Typography>
+            <Typography variant="body1" style={{ color: 'tomato' }}>
+              GFK/IFR Monitoring.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
+              •Investigación de mercado en Argentina y Latam. Trabajo en equipo.
+              <br /> •Análisis de métricas de productos disponibles en tiendas
+              físicas y online <br /> •Armado y presentación de informes con
+              deadlines.
             </Typography>
           </Box>
         </Box>
@@ -263,29 +279,35 @@ const Resume = () => {
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
             style={{ borderRadius: '5px', border: 'none' }}>
-            2007
+            2020
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
               style={{ color: 'tomato' }}>
-              Tecnicatura en Sonido y Grabación.
+              IT Courses
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
-              Taller de Música de Buenos Aires (TAMABA)
+              Universidad Tecnológica Nacional (UTN) / Codo a Codo (GCBA)
             </Typography>
             <Typography
               variant="subtitle1"
-              style={{ color: 'tan', textAlign: 'justify' }}>
-              • Mezcla, grabación y masterización de sonido. Sonido en vivo.
+              style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
+              •Diplomatura Professional Full Stack: ReactJS, AngularJS, NodeJS y
+              MongoDB. <br />
+              •Programa Codo a Codo Full Stack con orientación en Python.
+              Introducción a Metodologías ágiles. <br />
+              •Desarrollo web en HTML 5, CSS3 y Javascript.
+              <br />
+              •Experto en Diseño de Experiencia de Usuario e Interacciones.
             </Typography>
           </Box>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
             style={{ borderRadius: '5px', border: 'none' }}>
-            2010
+            2018
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -300,32 +322,29 @@ const Resume = () => {
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}>
-              • Especialización en periodismo y transmedia. Promedio general: 8.
+              •Orientación en periodismo. Promedio general: 8.
             </Typography>
           </Box>
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem} `}
             style={{ borderRadius: '5px', border: 'none' }}>
-            2019
+            2010
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
               className={classes.subHeading}
               style={{ color: 'tomato' }}>
-              IT Certifications.
+              Tecnicatura en Sonido y Grabación.
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
-              Universidad Tecnológica Nacional (UTN)
+              Taller de Música de Buenos Aires (TAMABA)
             </Typography>
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify' }}>
-              • Professional Full-Stack Developer: Desarrollo con ReactJS,
-              AngularJS, NodeJS, MYSQL y MongoDB. <br /> • Desarrollo web en
-              HTML 5, CSS3 y Javascript (nivel avanzado) <br />• Experto en
-              Diseño de Experiencia de Usuario e Interacciones (ux y ixd)
+              •Mezcla y grabación de sonido. Sonido en vivo.
             </Typography>
           </Box>
         </Box>
