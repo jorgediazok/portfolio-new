@@ -8,14 +8,14 @@ const path = require('path');
 //Check
 const app = express();
 
+//CREDENTIALS
+const userCredentials = process.env.USER_CREDENTIALS;
+const passCredentials = process.env.USER_PASSWORD;
+
 //Body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
-
-//CREDENTIALS
-const userCredentials = process.env.USER_CREDENTIALS;
-const passCredentials = process.env.USER_PASSWORD;
 
 //Check
 app.use(express.static('client/build/'));
@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 
+//Route for form
 app.post('/api/form', async (req, res) => {
   let data = req.body;
   console.log(data);
