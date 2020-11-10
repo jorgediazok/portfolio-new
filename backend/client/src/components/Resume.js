@@ -32,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
 
   headerTypography: {
     [theme.breakpoints.down('xs')]: {
-      fontSize: '1.7em',
+      fontSize: '1.6em',
       hyphens: 'auto',
       marginTop: '10px',
+      fontWeight: '400',
     },
   },
 
@@ -176,8 +177,7 @@ const Resume = () => {
           Desarrollador Full Stack de Buenos Aires, Argentina 🇦🇷. Progamo
           principalmente en React pero disfruto de aprender nuevas tecnologías
           👨‍💻. Tengo conocimientos en marketing digital, diseño UX y comunicación
-          📰. Me gusta viajar, trabajar en equipo, las analíticas y estudiar
-          idiomas 🚀.
+          📰. Me gusta viajar, el trabajo en equipo y estudiar idiomas 🚀.
         </Typography>
         <img src={Image} alt="Me" className={classes.profileImage} />
       </Box>
@@ -200,7 +200,7 @@ const Resume = () => {
               Full Stack / Web Design
             </Typography>
             <Typography variant="body1" style={{ color: 'tomato' }}>
-              Freelance. (Hasta la actualidad)
+              Freelance.
             </Typography>
             <Typography
               variant="subtitle1"
@@ -211,7 +211,7 @@ const Resume = () => {
               }}>
               •Trabajos de desarrollo web de manera Freelance. <br />
               •Utilización de ReactJS en el Frontend y NodeJS y MongoDB en
-              Backend. API rest. <br /> •Responsive Design.
+              Backend. API rest. Responsive Design.
               <br />
               •Participación en proyectos grupales: creación de un Chatbot.
             </Typography>
@@ -238,8 +238,8 @@ const Resume = () => {
               style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
               •Administrativo/Data entry, facturación de prestaciones médicas.
               <br /> •Logística y organización de documentación pública con
-              manejo de Nomenclador Nacional <br /> •Trabajo con base de datos a
-              través de MYSQL. <br />
+              manejo de Nomenclador Nacional. <br /> •Trabajo con base de datos
+              a través de MYSQL. <br />
             </Typography>
           </Box>
           <Typography
@@ -294,8 +294,8 @@ const Resume = () => {
             <Typography
               variant="subtitle1"
               style={{ color: 'tan', textAlign: 'justify', hyphens: 'auto' }}>
-              •Diplomatura Professional Full Stack: ReactJS, AngularJS, NodeJS y
-              MongoDB. <br />
+              •Diplomatura Professional Full Stack: ReactJS, Angular, Express,
+              Node y MongoDB. <br />
               •Programa Codo a Codo Full Stack con orientación en Python.
               Introducción a Metodologías ágiles. <br />
               •Desarrollo web en HTML 5, CSS3 y Javascript.
