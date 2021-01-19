@@ -11,6 +11,7 @@ const app = express();
 //CREDENTIALS
 const userCredentials = process.env.USER_CREDENTIALS;
 const passCredentials = process.env.USER_PASSWORD;
+const userGet = process.env.USER_MAIL;
 
 //Body parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,7 +44,7 @@ app.post('/api/form', async (req, res) => {
   });
   let mailOptions = {
     from: data.email,
-    to: 'jorgediazok@gmail.com',
+    to: userGet,
     subject: `Message from ${data.name}`,
     html: `
     <h3>Information</h3>
