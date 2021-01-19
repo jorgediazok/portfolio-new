@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const router = express.Router();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -7,16 +8,14 @@ const path = require('path');
 
 //Check
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
 
 //CREDENTIALS
 const userCredentials = process.env.USER_CREDENTIALS;
 const passCredentials = process.env.USER_PASSWORD;
 const userGet = process.env.USER_MAIL;
-
-//Body parser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cors());
 
 //const publicPath = path.join(__dirname, '..', 'public');
 //app.use(express.static(publicPath));
@@ -28,9 +27,8 @@ app.get('*', (req, res) => {
 });
 
 //Route for form
-app.post('/api/form', async (req, res) => {
+router.post('/api/form', async (req, res) => {
   let data = req.body;
-  console.log(data);
 
   let smtpTransport = await nodemailer.createTransport({
     service: 'gmail',
@@ -73,6 +71,8 @@ app.post('/api/form', async (req, res) => {
 });
 
 //Listening in Port
+
+app.use('/api/form', router);
 
 const PORT = process.env.PORT || 5000;
 
