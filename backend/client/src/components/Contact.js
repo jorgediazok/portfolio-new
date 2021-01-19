@@ -13,7 +13,6 @@ import {
 import SendIcon from '@material-ui/icons/Send';
 import Navbar from './Navbar';
 import axios from 'axios';
-require('dotenv').config();
 
 //Toastr
 
@@ -114,18 +113,15 @@ const Contact = () => {
 
   //Backend integration
 
-  const API = axios.create({
-    baseURL: process.env.REACT_APP_APIURL,
-  });
-
-  const formSubmit = async () => {
+  const formSubmit = () => {
     let data = {
       name,
       email,
       country,
       textarea,
     };
-    await API.post('/form', data)
+    axios
+      .post('/', data)
       .then((res) => {
         console.log(res);
         handleClick();

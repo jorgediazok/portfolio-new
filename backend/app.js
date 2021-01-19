@@ -23,7 +23,7 @@ app.get('*', (req, res) => {
 });
 
 //Route for form
-router.post('/api/form', async (req, res) => {
+router.post('/form', async (req, res) => {
   let data = req.body;
 
   let smtpTransport = await nodemailer.createTransport({
@@ -66,7 +66,7 @@ router.post('/api/form', async (req, res) => {
   smtpTransport.close();
 });
 
-app.use('/api/form', router);
+app.use('/api', router);
 
 //Listening in Port
 
