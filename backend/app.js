@@ -18,9 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
+//const publicPath = path.join(__dirname, '..', 'public');
+//app.use(express.static(publicPath));
+
 //Check
 app.use(express.static('client/build/'));
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
