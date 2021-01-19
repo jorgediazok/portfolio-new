@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-require('dotenv').config();
 import { useForm } from 'react-hook-form';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiAlert from '@material-ui/lab/Alert';
