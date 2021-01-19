@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
 //Route for form
 app.post('/api/form', async (req, res) => {
   let data = req.body;
+  console.log(data);
 
   let smtpTransport = await nodemailer.createTransport({
     service: 'gmail',
