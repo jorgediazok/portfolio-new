@@ -101,7 +101,7 @@ const Contact = () => {
     if (reason === 'clickaway') {
       return;
     }
-    setOpen(false);
+    setTimeout(setOpen(false), 3000);
   };
 
   const resetForm = () => {
