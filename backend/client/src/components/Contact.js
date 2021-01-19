@@ -121,7 +121,7 @@ const Contact = () => {
       textarea,
     };
     axios
-      .post('/api/form', data)
+      .post('https://jorgedev-portfolio.herokuapp.com/api/form', data)
       .then((res) => {
         console.log(res);
         handleClick();

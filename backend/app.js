@@ -17,9 +17,6 @@ const userCredentials = process.env.USER_CREDENTIALS;
 const passCredentials = process.env.USER_PASSWORD;
 const userGet = process.env.USER_MAIL;
 
-//const publicPath = path.join(__dirname, '..', 'public');
-//app.use(express.static(publicPath));
-
 //Check
 app.use(express.static('client/build/'));
 app.get('*', (req, res) => {
@@ -70,9 +67,9 @@ router.post('/api/form', async (req, res) => {
   smtpTransport.close();
 });
 
-//Listening in Port
-
 app.use('/api/form', router);
+
+//Listening in Port
 
 const PORT = process.env.PORT || 5000;
 
