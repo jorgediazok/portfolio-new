@@ -125,7 +125,7 @@ const Contact = () => {
       country,
       textarea,
     };
-    API.post('/form', data)
+    API.post(`/api/form`, data)
       .then((res) => {
         console.log(res);
         handleClick();
