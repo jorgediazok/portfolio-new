@@ -115,17 +115,17 @@ const Contact = () => {
   //Backend integration
 
   const API = axios.create({
-    baseURL: process.env.REACT_APP_URI,
+    baseURL: process.env.REACT_APP_APIURL,
   });
 
-  const formSubmit = () => {
+  const formSubmit = async () => {
     let data = {
       name,
       email,
       country,
       textarea,
     };
-    API.post(`/api/form`, data)
+    await API.post('/form', data)
       .then((res) => {
         console.log(res);
         handleClick();
