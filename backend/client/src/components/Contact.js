@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+require('dotenv').config();
 import { useForm } from 'react-hook-form';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -113,6 +114,10 @@ const Contact = () => {
 
   //Backend integration
 
+  const API = axios.create({
+    baseURL: process.env.REACT_APP_HEROKU_URI,
+  });
+
   const formSubmit = () => {
     let data = {
       name,
@@ -120,8 +125,7 @@ const Contact = () => {
       country,
       textarea,
     };
-    axios
-      .post('https://jorgedev-portfolio.herokuapp.com/api/form', data)
+    API.post('/form', data)
       .then((res) => {
         console.log(res);
         handleClick();
