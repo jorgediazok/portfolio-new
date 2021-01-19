@@ -15,7 +15,7 @@ import {
 import Navbar from './Navbar';
 import project1 from '../assets/images/html-css-javascript-lg.jpg';
 import project2 from '../assets/images/javascript-fullstack.jpg';
-import project3 from '../assets/images/react-redux.jpg';
+import project3 from '../assets/images/react.jpg';
 import project4 from '../assets/images/mern-stack.jpg';
 
 const useStyles = makeStyles({
@@ -164,7 +164,7 @@ const Portfolio = () => {
                     color="textSecondary"
                     component="p"
                     style={{ textAlign: 'center' }}>
-                    Proyecto que trae desde la Api de Tv Maze información
+                    Proyecto que trae desde la API de Tv Maze información
                     detallada sobre cualquier serie que el usuario busque desde
                     la Search Bar. Realizado con React y React Context. Estilos
                     en CSS y uso de media queries para responsive.
