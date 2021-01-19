@@ -13,6 +13,7 @@ import {
 import SendIcon from '@material-ui/icons/Send';
 import Navbar from './Navbar';
 import axios from 'axios';
+require('dotenv').config();
 
 //Toastr
 
