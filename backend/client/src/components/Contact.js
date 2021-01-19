@@ -121,7 +121,7 @@ const Contact = () => {
       textarea,
     };
     axios
-      .post('/', data)
+      .post('/api/form', data)
       .then((res) => {
         console.log(res);
         handleClick();
