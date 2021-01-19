@@ -15,7 +15,7 @@ import {
 import Navbar from './Navbar';
 import project1 from '../assets/images/html-css-javascript-lg.jpg';
 import project2 from '../assets/images/javascript-fullstack.jpg';
-import project3 from '../assets/images/react-fullstack.jpg';
+import project3 from '../assets/images/react-redux.jpg';
 import project4 from '../assets/images/mern-stack.jpg';
 
 const useStyles = makeStyles({
@@ -81,7 +81,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://elated-kepler-e1c51d.netlify.app/">
+                    href="https://oscars-game-site.netlify.app/">
                     Deploy
                   </a>
                 </Button>
@@ -114,7 +114,7 @@ const Portfolio = () => {
                     Sitio web de venta de Consolas y Videojuegos. Shopping Cart
                     con utilización de API REST, NodeJS, Express, localStorage y
                     Formularios. CSS y Vanilla Javascript, sin frameworks. Base
-                    de datos en MongoDB Atlas.
+                    de datos en MongoDB.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -157,17 +157,17 @@ const Portfolio = () => {
                     gutterBottom
                     variant="h5"
                     style={{ textAlign: 'center' }}>
-                    COVID-19 Tracker Project
+                    Search Your Series
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                     style={{ textAlign: 'center' }}>
-                    Proyecto que trae desde una API información en tiempo real
-                    sobre los casos, recuperados y fallecidos por coronavirus en
-                    todo el mundo. Realizado con React, Material UI, React
-                    Context, y con el backend en Firebase.
+                    Proyecto que trae desde la Api de Tv Maze información
+                    detallada sobre cualquier serie que el usuario busque desde
+                    la Search Bar. Realizado con React y React Context. Estilos
+                    en CSS y uso de media queries para responsive.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -178,7 +178,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/react-covid19-tracker">
+                    href="https://github.com/jorgediazok/react-shows-app">
                     Github
                   </a>
                 </Button>
@@ -187,7 +187,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://covid-19-tracker-369c8.web.app/">
+                    href="https://react-series-app.netlify.app/">
                     Deploy
                   </a>
                 </Button>
