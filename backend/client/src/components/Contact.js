@@ -118,7 +118,7 @@ const Contact = () => {
     baseURL: process.env.REACT_APP_URI,
   });
 
-  const formSubmit = (data) => {
+  const formSubmit = () => {
     let data = {
       name,
       email,
