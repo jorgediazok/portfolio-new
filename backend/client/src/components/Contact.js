@@ -123,7 +123,6 @@ const Contact = () => {
     axios
       .post('/api/form', data)
       .then((res) => {
-        console.log(res);
         handleClick();
         resetForm();
       })
