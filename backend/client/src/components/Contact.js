@@ -115,10 +115,10 @@ const Contact = () => {
   //Backend integration
 
   const API = axios.create({
-    baseURL: process.env.REACT_APP_HEROKU_URI,
+    baseURL: process.env.REACT_APP_URI,
   });
 
-  const formSubmit = () => {
+  const formSubmit = (data) => {
     let data = {
       name,
       email,
