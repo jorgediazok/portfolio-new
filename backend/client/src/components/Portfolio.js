@@ -231,7 +231,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/MERN-Fullstack-App">
+                    href="https://github.com/jorgediazok/posts-mern-app/">
                     Github
                   </a>
                 </Button>
