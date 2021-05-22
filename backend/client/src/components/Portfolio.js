@@ -220,7 +220,7 @@ const Portfolio = () => {
                     Proyecto de estilo Red Social en donde cada usuario se
                     registra y puede compartir momentos de su vida. Hecha con
                     React-Redux, Express, Node y Base de datos en Mongo DB.
-                    Frontend con MaterialUI y styled components.
+                    Frontend con MaterialUI y styled components. Responsive.
                   </Typography>
                 </CardContent>
               </CardActionArea>
