@@ -210,7 +210,7 @@ const Portfolio = () => {
                     gutterBottom
                     variant="h5"
                     style={{ textAlign: 'center' }}>
-                    Post Your Moments App
+                    Post Your Memories App
                   </Typography>
                   <Typography
                     variant="body2"
