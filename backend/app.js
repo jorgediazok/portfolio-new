@@ -58,6 +58,7 @@ router.post('/form', async (req, res) => {
   await smtpTransport.sendMail(mailOptions, (error, response) => {
     if (error) {
       res.send(error);
+      console.log(error);
     } else {
       res.send('success');
       res.render('contact', { msg: 'Email has been sent' });
