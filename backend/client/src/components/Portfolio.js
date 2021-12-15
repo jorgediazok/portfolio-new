@@ -33,31 +33,33 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Box component="div" className={classes.mainContainer}>
+      <Box component='div' className={classes.mainContainer}>
         <Navbar />
-        <Grid container justify="center" alignItems="center">
+        <Grid container justify='center' alignItems='center'>
           {/*Project 1*/}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
-                  component="img"
-                  alt="Project 1"
-                  height="140"
+                  component='img'
+                  alt='Project 1'
+                  height='140'
                   image={project1}
                 />
                 <CardContent>
                   <Typography
                     gutterBottom
-                    variant="h5"
-                    style={{ textAlign: 'center' }}>
+                    variant='h5'
+                    style={{ textAlign: 'center' }}
+                  >
                     Oscars Game Project
                   </Typography>
                   <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    style={{ textAlign: 'center' }}>
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                    style={{ textAlign: 'center' }}
+                  >
                     Juego diseñado para votar y que cada participante elija a
                     sus candidatos a ganar la estatuilla en cada categoría
                     disponible en los premios Oscars del año 2020. Responsive y
@@ -66,22 +68,25 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions
-                style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button size="small" color="primary">
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/oscars-2020">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://github.com/jorgediazok/oscars-2020'
+                  >
                     Github
                   </a>
                 </Button>
-                <Button size="small" color="primary">
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://oscars-game-site.netlify.app/">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://oscars-game-site.netlify.app/'
+                  >
                     Deploy
                   </a>
                 </Button>
@@ -94,23 +99,25 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
-                  component="img"
-                  alt="Project 2"
-                  height="140"
+                  component='img'
+                  alt='Project 2'
+                  height='140'
                   image={project2}
                 />
                 <CardContent>
                   <Typography
                     gutterBottom
-                    variant="h5"
-                    style={{ textAlign: 'center' }}>
-                    Gaming Website Project
+                    variant='h5'
+                    style={{ textAlign: 'center' }}
+                  >
+                    Gaming Shop Project
                   </Typography>
                   <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    style={{ textAlign: 'center' }}>
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                    style={{ textAlign: 'center' }}
+                  >
                     Sitio web de venta de Consolas y Videojuegos. Shopping Cart
                     con utilización de API REST, NodeJS, Express, localStorage y
                     Formularios. CSS y Vanilla Javascript, sin frameworks. Base
@@ -119,22 +126,25 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions
-                style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button size="small" color="primary">
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/shopping-cart">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://github.com/jorgediazok/shopping-cart'
+                  >
                     Github
                   </a>
                 </Button>
-                <Button size="small" color="primary">
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://gaming-shoppingcart.herokuapp.com/index.html">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://gaming-shoppingcart.herokuapp.com/index.html'
+                  >
                     Deploy
                   </a>
                 </Button>
@@ -147,47 +157,52 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
-                  component="img"
-                  alt="Project 3"
-                  height="140"
+                  component='img'
+                  alt='Project 3'
+                  height='140'
                   image={project3}
                 />
                 <CardContent>
                   <Typography
                     gutterBottom
-                    variant="h5"
-                    style={{ textAlign: 'center' }}>
+                    variant='h5'
+                    style={{ textAlign: 'center' }}
+                  >
                     Search Your Series
                   </Typography>
                   <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    style={{ textAlign: 'center' }}>
-                    Proyecto que trae desde la API de Tv Maze información
-                    detallada sobre cualquier serie que el usuario busque desde
-                    la Search Bar. Realizado con React y React Context. Estilos
-                    en CSS y uso de media queries para responsive.
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                    style={{ textAlign: 'center' }}
+                  >
+                    Proyecto que trae desde la API de TMDB información detallada
+                    sobre cualquier película que el usuario busque desde la
+                    Search Bar. Realizado con React y React Context. Estilos en
+                    Styled Components. Uso de custom Hooks.
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions
-                style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button size="small" color="primary">
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/react-shows-app">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://github.com/jorgediazok/react-movies-2021'
+                  >
                     Github
                   </a>
                 </Button>
-                <Button size="small" color="primary">
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://react-series-app.netlify.app/">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://react-movies-21.netlify.app/'
+                  >
                     Deploy
                   </a>
                 </Button>
@@ -200,23 +215,25 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
-                  component="img"
-                  alt="Project 4"
-                  height="140"
+                  component='img'
+                  alt='Project 4'
+                  height='140'
                   image={project4}
                 />
                 <CardContent>
                   <Typography
                     gutterBottom
-                    variant="h5"
-                    style={{ textAlign: 'center' }}>
-                    Post Your Memories App
+                    variant='h5'
+                    style={{ textAlign: 'center' }}
+                  >
+                    Post Your Moments App
                   </Typography>
                   <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    style={{ textAlign: 'center' }}>
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                    style={{ textAlign: 'center' }}
+                  >
                     Proyecto de estilo Red Social en donde cada usuario se
                     registra y puede compartir momentos de su vida. Hecha con
                     React-Redux, Express, Node y Base de datos en Mongo DB.
@@ -225,22 +242,25 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions
-                style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button size="small" color="primary">
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/jorgediazok/posts-mern-app/">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://github.com/jorgediazok/posts-mern-app/'
+                  >
                     Github
                   </a>
                 </Button>
-                <Button size="small" color="primary">
+                <Button size='small' color='primary'>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://post-your-moments.herokuapp.com/">
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://post-your-moments.herokuapp.com/'
+                  >
                     Deploy
                   </a>
                 </Button>
