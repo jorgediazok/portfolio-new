@@ -44,7 +44,7 @@ const Portfolio = () => {
                   component='img'
                   alt='Project 1'
                   height='140'
-                  image={project1}
+                  image={project3}
                 />
                 <CardContent>
                   <Typography
@@ -62,8 +62,8 @@ const Portfolio = () => {
                   >
                     Juego diseñado para votar y que cada participante elija a
                     sus candidatos a ganar la estatuilla en cada categoría
-                    disponible en los premios Oscars del año 2020. Responsive y
-                    reutilisable para otros años. HTML, CSS y JS.
+                    disponible en los premios Oscars del año 2021. Realizado en
+                    React y la API de Contentful.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -75,7 +75,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target='_blank'
                     rel='noopener noreferrer'
-                    href='https://github.com/jorgediazok/oscars-2020'
+                    href='https://github.com/jorgediazok/oscars-2021-project'
                   >
                     Github
                   </a>
@@ -85,7 +85,7 @@ const Portfolio = () => {
                     style={{ textDecoration: 'none', color: 'black' }}
                     target='_blank'
                     rel='noopener noreferrer'
-                    href='https://oscars-game-site.netlify.app/'
+                    href='https://react-oscars-game.netlify.app/'
                   >
                     Deploy
                   </a>
