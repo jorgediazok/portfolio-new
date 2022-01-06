@@ -64,6 +64,7 @@ const Portfolio = () => {
                     React, Redux and Sass in the front and Node JS, Express and
                     Mongo DB in the back. To purchase a product needs
                     registration. API data managed with Contentful CMS.
+                    Interesting 404 page in case of mispelling.
                   </Typography>
                 </CardContent>
               </CardActionArea>
