@@ -34,16 +34,16 @@ const Header = () => {
   const classes = useStyles();
   return (
     <Box className={classes.typedContainer}>
-      <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Avatar"></Avatar>
+      <Grid container justify='center'>
+        <Avatar className={classes.avatar} src={avatar} alt='Avatar'></Avatar>
       </Grid>
-      <Typography className={classes.title} variant="h5">
+      <Typography className={classes.title} variant='h5'>
         <Typed strings={["HI, I'M JORGE."]} typeSpeed={60} />
       </Typography>
       <br />
-      <Typography className={classes.subtitle} variant="h5">
+      <Typography className={classes.subtitle} variant='h5'>
         <Typed
-          strings={['Full Stack Developer', 'Web Designer', 'React specialist']}
+          strings={['Full Stack Developer', 'Web Designer', 'React Frontend']}
           typeSpeed={60}
           backSpeed={60}
           loop
